@@ -38,3 +38,9 @@ persistencia tras reiniciar los contenedores y una restauración manual en una
 segunda instalación. Esta validación cubre una máquina Windows con Docker
 Desktop; no acredita pruebas separadas en macOS o Linux ni soporte para acceso
 remoto o alojamiento gestionado.
+
+## v0.1.1 — actualización de la política de seguridad
+
+La guía `SECURITY.md` ahora dirige directamente al canal privado de
+vulnerabilidades, que está habilitado en el repositorio público. Esta versión
+solo actualiza documentación; no cambia el código de la aplicación.

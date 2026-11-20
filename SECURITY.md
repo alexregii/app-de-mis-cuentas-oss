@@ -2,17 +2,15 @@
 
 ## Versiones con soporte
 
-La primera versión estable todavía no está publicada. Hasta que exista una
-release, no hay una versión estable con soporte oficial. Tras la publicación,
-el soporte se limita a la última versión estable.
+La versión estable actual es `v0.1.1`. El soporte se limita a la última versión
+estable publicada; no hay un plazo de respuesta garantizado.
 
 ## Informar de una vulnerabilidad
 
 No informes vulnerabilidades en Issues, Discussions, pull requests ni en
-mensajes públicos. Cuando el repositorio público esté disponible, el canal
-previsto es **Security → Advisories → Report a vulnerability** de GitHub. El
-mantenedor habilitará los informes privados en la configuración del repositorio
-público antes de anunciarlo.
+mensajes públicos. El repositorio público tiene habilitados los informes
+privados de GitHub. Usa **Security → Advisories → Report a vulnerability** o
+<https://github.com/alexregii/app-de-mis-cuentas-oss/security/advisories/new>.
 
 Si no aparece **Report a vulnerability**, no publiques detalles técnicos ni
 pruebas de concepto. Solicita al mantenedor una vía privada a través del
