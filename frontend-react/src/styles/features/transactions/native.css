@@ -1,0 +1,6 @@
+.quick-entry {
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  box-shadow: none;
+  backdrop-filter: none;
+}

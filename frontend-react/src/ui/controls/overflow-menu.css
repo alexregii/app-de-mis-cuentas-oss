@@ -1,0 +1,147 @@
+.ui-overflow-menu {
+  position: relative;
+  min-width: 0;
+  transition: opacity 150ms ease-out, transform 150ms ease-out, visibility 0s linear 0s;
+}
+
+.ui-overflow-menu.is-open {
+  z-index: var(--z-tooltip);
+}
+
+.ui-overflow-menu--compact > .ui-overflow-menu__trigger {
+  width: 1.8rem;
+  min-width: 1.8rem;
+  min-height: 1.8rem;
+}
+
+.ui-overflow-menu.is-suspended {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-.2rem);
+  visibility: hidden;
+  transition: opacity 150ms ease-out, transform 150ms ease-out, visibility 0s linear 150ms;
+}
+
+.ui-overflow-menu__trigger {
+  box-sizing: border-box;
+  display: inline-grid;
+  width: 2.75rem;
+  min-width: 2.75rem;
+  min-height: 2.8rem;
+  place-items: center;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--ui-radius-control);
+  background: transparent;
+  color: var(--ink-2);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ui-overflow-menu__trigger:hover,
+.ui-overflow-menu.is-open > .ui-overflow-menu__trigger {
+  background: var(--accent-surface);
+  color: var(--ink);
+}
+
+.ui-overflow-menu__trigger svg,
+.ui-overflow-menu__item svg {
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+}
+
+.ui-overflow-menu[data-trigger="text"] > .ui-overflow-menu__trigger {
+  display: inline-flex;
+  width: auto;
+  min-width: 0;
+  justify-content: center;
+  gap: var(--space-2xs);
+  padding-inline: .75rem;
+  border-color: var(--rule-strong);
+  color: var(--ink-2);
+  font-size: .88rem;
+}
+
+.ui-overflow-menu__panel {
+  position: absolute;
+  z-index: var(--z-tooltip);
+  inset-block-start: calc(100% + var(--space-2xs));
+  inset-inline-end: 0;
+  display: grid;
+  min-width: 10rem;
+  max-width: min(18rem, calc(100vw - 2rem));
+  max-height: min(18rem, calc(100dvh - 2rem));
+  overflow: auto;
+  gap: var(--space-3xs);
+  padding: var(--space-2xs);
+  border: 1px solid var(--ui-separator);
+  border-radius: var(--ui-radius-overlay);
+  background: var(--ui-overlay);
+  box-shadow: var(--ui-overlay-shadow);
+  animation: ui-overflow-menu-enter 120ms ease-out both;
+}
+
+.ui-overflow-menu__panel[hidden] {
+  display: none;
+}
+
+.ui-overflow-menu[data-align="start"] > .ui-overflow-menu__panel {
+  inset-inline: 0 auto;
+}
+
+.ui-overflow-menu[data-placement="top"] > .ui-overflow-menu__panel {
+  inset-block: auto calc(100% + var(--space-2xs));
+}
+
+.ui-overflow-menu__item {
+  display: inline-flex;
+  width: 100%;
+  min-height: 2.25rem;
+  align-items: center;
+  gap: var(--space-2xs);
+  padding: .4rem .65rem;
+  border: 0;
+  border-radius: var(--ui-radius-control);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  text-align: start;
+  text-decoration: none;
+}
+
+.ui-overflow-menu__item:hover {
+  background: var(--accent-surface);
+}
+
+.ui-overflow-menu__item--danger {
+  color: color-mix(in srgb, var(--danger) 70%, var(--ink));
+}
+
+@keyframes ui-overflow-menu-enter {
+  from { opacity: 0; transform: translateY(-.15rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (hover: none), (pointer: coarse), (max-width: 42rem) {
+  .ui-overflow-menu--compact > .ui-overflow-menu__trigger {
+    width: 2.75rem;
+    min-width: 2.75rem;
+    min-height: 2.8rem;
+  }
+
+  .ui-overflow-menu__item {
+    min-height: 2.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-overflow-menu,
+  .ui-overflow-menu__panel {
+    animation: none;
+    transition: none;
+  }
+}

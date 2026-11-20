@@ -1,0 +1,64 @@
+.ui-transaction-list {
+  display: grid;
+  margin-top: var(--space-md);
+  border-top: 1px solid var(--ui-separator);
+}
+
+.ui-transaction-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-sm);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--ui-separator);
+  transition: background-color var(--ui-motion-duration) var(--ui-motion-ease);
+}
+
+.ui-transaction-row.is-selectable { grid-template-columns: auto minmax(0, 1fr); }
+.ui-transaction-row.has-actions { grid-template-columns: minmax(0, 1fr) auto; }
+.ui-transaction-row.is-selectable.has-actions { grid-template-columns: auto minmax(0, 1fr) auto; }
+
+.ui-transaction-row:hover { background: color-mix(in srgb, var(--accent-surface) 32%, transparent); }
+.ui-transaction-row.is-selected { background: color-mix(in srgb, var(--accent-surface) 56%, transparent); }
+.ui-transaction-row__select { padding-top: 0.18rem; }
+.ui-transaction-row__select input { appearance: auto; box-sizing: border-box; display: block; width: 1rem; min-width: 1rem; height: 1rem; min-height: 1rem; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; accent-color: var(--accent-solid); }
+.ui-transaction-row__body { min-width: 0; }
+.ui-transaction-row__headline > .ui-transaction-identity { min-width: 0; }
+.ui-transaction-row__metadata > .ui-transaction-identity { display: contents; }
+
+.ui-transaction-row__headline {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: var(--space-md);
+}
+
+.ui-transaction-row__headline > .ui-money-amount { font-size: 1.125rem; font-weight: 760; }
+
+.ui-transaction-row__metadata {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-2xs);
+  color: var(--ink-2);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+.ui-transaction-row__metadata > span:not(:last-child)::after { content: "·"; margin-left: var(--space-xs); color: var(--muted); }
+.ui-transaction-row__detail { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); margin-top: var(--space-2xs); color: var(--ink-2); font-size: 0.75rem; line-height: 1.4; }
+.ui-transaction-row__detail span { display: inline-flex; align-items: center; gap: var(--space-2xs); }
+.ui-transaction-row__detail svg { width: 0.85rem; height: 0.85rem; }
+.ui-transaction-row__actions { align-self: start; }
+.ui-transaction-row__actions .ui-overflow-menu__item[data-action="edit"] { color: var(--accent-text); }
+.ui-transaction-row.is-compact { padding-block: var(--space-sm); }
+.ui-transaction-row.is-compact .ui-transaction-row__headline > .ui-money-amount { font-size: 1rem; }
+@media (max-width: 32rem) {
+  .ui-transaction-row.is-selectable { grid-template-columns: auto minmax(0, 1fr); }
+  .ui-transaction-row.has-actions { grid-template-columns: minmax(0, 1fr) auto; }
+  .ui-transaction-row.is-selectable.has-actions { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .ui-transaction-row__headline { gap: var(--space-sm); }
+  .ui-transaction-row__metadata > span:not(:last-child)::after { display: none; }
+  .ui-transaction-row__metadata { gap: var(--space-2xs) var(--space-sm); }
+}

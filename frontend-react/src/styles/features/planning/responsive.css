@@ -1,0 +1,143 @@
+@media (min-width: 40rem) {
+  .planning-period-note {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: baseline;
+    gap: var(--space-sm);
+  }
+
+  .planning-composer-choice {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+.planning-composer-choice .inline-actions,
+  .planning-composer-choice .ui-button {
+    width: auto;
+  }
+}
+
+@media (min-width: 48rem) {
+  .planning-margin-panel {
+    grid-template-columns: minmax(13rem, 0.8fr) minmax(20rem, 1.2fr);
+    align-items: center;
+  }
+
+  .planning-projection-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .planning-projection-strip > div {
+    padding: var(--space-sm);
+    border-block-end: 0;
+    border-inline-end: 1px solid var(--rule);
+  }
+
+  .planning-projection-strip > div:last-child {
+    border-inline-end: 0;
+  }
+
+  .planning-watchlist {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .planning-candidate {
+    grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.8fr);
+    align-items: center;
+  }
+
+  .planning-candidate .inline-actions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .planning-candidate .ui-button {
+    width: auto;
+  }
+}
+
+@media (min-width: 64rem) {
+  .planning-candidate .planning-candidate-main-actions {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .planning-candidate .planning-candidate-automation {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    border-block-start: 0;
+  }
+
+  .planning-candidate .planning-candidate-automation > summary {
+    width: fit-content;
+    min-width: 13rem;
+    max-width: 100%;
+    min-height: var(--control-height);
+    justify-content: center;
+    margin-inline-start: auto;
+    padding-inline: 0.86rem;
+    border: 1px solid var(--ui-separator);
+    border-radius: var(--ui-radius-control);
+    background: var(--ui-surface);
+    color: var(--ink);
+    font-size: 0.86rem;
+    font-weight: 740;
+  }
+}
+
+@media (max-width: 24.375rem) {
+  .planning-calendar-day.has-amounts .planning-calendar-day-signals { display: none; }
+
+  .planning-margin-breakdown > div {
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-2xs);
+    padding-block: var(--space-xs);
+  }
+
+  .planning-decision-list li {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .planning-decision-list li > svg {
+    display: none;
+  }
+
+  .planning-view .section-header {
+    align-items: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .planning-view * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+@media (max-width: 47.99rem) {
+  .planning-calendar-heading { display:grid; align-items:start; gap:var(--space-xs); }
+  .planning-calendar-legend { gap:var(--space-md); }
+  .planning-calendar-weekdays span { padding:var(--space-2xs); font-size:.7rem; }
+  .planning-calendar-day { min-height:3.5rem; padding:var(--space-2xs); }
+  .planning-calendar-day-number { font-size:.78rem; }
+  .planning-calendar-day-amounts { font-size:.7rem; }
+  .planning-calendar-day-signals i { min-width:.85rem; height:.85rem; font-size:.58rem; }
+  .planning-calendar-detail { padding:var(--space-sm); }
+  .planning-calendar-item { gap:var(--space-xs); font-size:.8rem; }
+  .planning-calendar-item-state { font-size:.68rem; }
+}
+@media (max-width: 48rem) { .planning-savings-goal .entry-form { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 47.99rem) {
+  .planning-objective-summary { grid-template-columns: minmax(0, 1fr); }
+  .planning-objective-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .planning-objective-allocation,
+  .planning-objective-form { grid-template-columns: minmax(0, 1fr); }
+  .planning-objective-allocation .ui-button,
+  .planning-objective-form-actions .ui-button,
+  .planning-objective-actions > .ui-button,
+  .planning-objective-confirmation .ui-button,
+  .planning-objective-archive-confirm .ui-button { width: 100%; }
+  .planning-objective-archive-confirm { align-items: stretch; }
+}

@@ -1,0 +1,59 @@
+@media (min-width: 48rem) {
+
+  .balance-panel {
+    grid-template-columns: minmax(9rem, 0.8fr) minmax(14rem, auto) minmax(9rem, 0.8fr);
+    align-items: center;
+    padding: 1.25rem;
+  }
+}
+
+@media (min-width: 48rem) {
+
+  .balance-copy {
+    justify-self: start;
+  }
+}
+
+@media (min-width: 48rem) {
+
+  .balance-amount {
+    justify-self: center;
+    font-size: clamp(3rem, 5.4vw, 3.8rem);
+    line-height: 0.95;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 48rem) {
+
+  .balance-status {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 48rem) {
+  .balance-status {
+    backdrop-filter: none;
+  }
+}
+
+@media (max-width: 48rem) {
+
+  .balance-panel {
+    background: var(--surface);
+  }
+}
+
+@media (max-width: 48rem) {
+
+  .balance-status {
+    background: var(--surface-soft);
+  }
+}
+
+@media (max-width: 23rem) {
+
+  .balance-panel strong {
+    font-size: 2rem;
+  }
+}

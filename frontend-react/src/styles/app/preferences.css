@@ -1,0 +1,9 @@
+@media (prefers-reduced-transparency: reduce) {
+  .app-header,
+.bottom-nav,
+.more-sheet,
+.desktop-rail {
+    backdrop-filter: none;
+    background: var(--surface-strong);
+  }
+}

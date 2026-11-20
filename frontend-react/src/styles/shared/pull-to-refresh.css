@@ -1,0 +1,59 @@
+.pull-zone {
+  position: relative;
+}
+
+.pull-indicator {
+  position: absolute;
+  z-index: calc(var(--z-sticky) - 1);
+  inset-block-start: calc(-1 * var(--space-md));
+  inset-inline-end: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.04rem 0.36rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--ui-radius-control);
+  background: var(--surface-strong);
+  color: var(--accent-strong);
+  font-size: 0.62rem;
+  font-weight: 650;
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-0.2rem);
+  transition: opacity 140ms ease, transform 140ms cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 140ms;
+}
+
+.pull-indicator.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+.pull-indicator-icon {
+  width: 0.72rem;
+  height: 0.72rem;
+  flex: 0 0 auto;
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pull-indicator.ready,
+.pull-indicator.refreshing {
+  border-color: color-mix(in oklch, var(--accent) 34%, var(--rule));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pull-indicator {
+    transform: translateY(0);
+    transition: opacity 100ms linear, visibility 0s;
+  }
+
+  .pull-indicator-icon {
+    transform: none !important;
+    animation: none !important;
+    transition: none;
+  }
+}

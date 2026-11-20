@@ -1,0 +1,11 @@
+@media (prefers-reduced-transparency: reduce) {
+  .panel,
+.metric-card,
+.bulk-toolbar,
+.list-card,
+.button,
+.icon-button {
+    backdrop-filter: none;
+    background: var(--surface-strong);
+  }
+}

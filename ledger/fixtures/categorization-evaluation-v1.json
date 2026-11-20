@@ -1,0 +1,257 @@
+{
+  "dataset_id": "synthetic-categorization-v1",
+  "synthetic": true,
+  "split_date": "2026-01-01",
+  "categories": [
+    {
+      "id": 1,
+      "kind": "expense",
+      "name": "Supermercado"
+    },
+    {
+      "id": 2,
+      "kind": "expense",
+      "name": "Transporte"
+    },
+    {
+      "id": 3,
+      "kind": "expense",
+      "name": "Restaurantes"
+    },
+    {
+      "id": 4,
+      "kind": "expense",
+      "name": "Farmacia"
+    },
+    {
+      "id": 5,
+      "kind": "expense",
+      "name": "Servicios del hogar"
+    },
+    {
+      "id": 6,
+      "kind": "income",
+      "name": "Nómina"
+    }
+  ],
+  "training": [
+    {
+      "id": "train-grocery-1",
+      "date": "2025-09-04",
+      "source": "enable_banking",
+      "kind": "expense",
+      "description": "Mercado Roble",
+      "amount_band": "20-30 EUR",
+      "category_id": 1
+    },
+    {
+      "id": "train-grocery-2",
+      "date": "2025-10-09",
+      "source": "csv",
+      "kind": "expense",
+      "description": "Tienda Verde",
+      "amount_band": "10-20 EUR",
+      "category_id": 1
+    },
+    {
+      "id": "train-transport-1",
+      "date": "2025-09-11",
+      "source": "enable_banking",
+      "kind": "expense",
+      "description": "Metro Azul",
+      "amount_band": "1-10 EUR",
+      "category_id": 2
+    },
+    {
+      "id": "train-transport-2",
+      "date": "2025-11-02",
+      "source": "csv",
+      "kind": "expense",
+      "description": "Autobuses Norte",
+      "amount_band": "10-20 EUR",
+      "category_id": 2
+    },
+    {
+      "id": "train-food-1",
+      "date": "2025-10-13",
+      "source": "enable_banking",
+      "kind": "expense",
+      "description": "Café Plaza",
+      "amount_band": "1-10 EUR",
+      "category_id": 3
+    },
+    {
+      "id": "train-food-2",
+      "date": "2025-11-08",
+      "source": "csv",
+      "kind": "expense",
+      "description": "Restaurante Río",
+      "amount_band": "20-30 EUR",
+      "category_id": 3
+    },
+    {
+      "id": "train-pharmacy-1",
+      "date": "2025-09-19",
+      "source": "enable_banking",
+      "kind": "expense",
+      "description": "Farmacia Sol",
+      "amount_band": "10-20 EUR",
+      "category_id": 4
+    },
+    {
+      "id": "train-pharmacy-2",
+      "date": "2025-11-16",
+      "source": "csv",
+      "kind": "expense",
+      "description": "Botica Norte",
+      "amount_band": "20-30 EUR",
+      "category_id": 4
+    },
+    {
+      "id": "train-home-1",
+      "date": "2025-10-21",
+      "source": "enable_banking",
+      "kind": "expense",
+      "description": "Luz Hogar",
+      "amount_band": "30-40 EUR",
+      "category_id": 5
+    },
+    {
+      "id": "train-home-2",
+      "date": "2025-11-20",
+      "source": "csv",
+      "kind": "expense",
+      "description": "Agua Ciudad",
+      "amount_band": "10-20 EUR",
+      "category_id": 5
+    },
+    {
+      "id": "train-salary-1",
+      "date": "2025-09-25",
+      "source": "enable_banking",
+      "kind": "income",
+      "description": "Nómina Ejemplo",
+      "amount_band": "1000-2000 EUR",
+      "category_id": 6
+    },
+    {
+      "id": "train-salary-2",
+      "date": "2025-11-25",
+      "source": "csv",
+      "kind": "income",
+      "description": "Ingreso Empresa Demo",
+      "amount_band": "2000-3000 EUR",
+      "category_id": 6
+    }
+  ],
+  "holdout": [
+    {
+      "id": "hold-grocery-1",
+      "date": "2026-01-04",
+      "source": "enable_banking",
+      "kind": "expense",
+      "description": "Mercado Acacia",
+      "amount_band": "20-30 EUR",
+      "expected_category_id": 1
+    },
+    {
+      "id": "hold-grocery-2",
+      "date": "2026-02-09",
+      "source": "csv",
+      "kind": "expense",
+      "description": "Despensa Central",
+      "amount_band": "30-40 EUR",
+      "expected_category_id": 1
+    },
+    {
+      "id": "hold-transport-1",
+      "date": "2026-01-11",
+      "source": "enable_banking",
+      "kind": "expense",
+      "description": "Tranvía Verde",
+      "amount_band": "1-10 EUR",
+      "expected_category_id": 2
+    },
+    {
+      "id": "hold-transport-2",
+      "date": "2026-02-02",
+      "source": "csv",
+      "kind": "expense",
+      "description": "Bus Metropolitano",
+      "amount_band": "10-20 EUR",
+      "expected_category_id": 2
+    },
+    {
+      "id": "hold-food-1",
+      "date": "2026-01-13",
+      "source": "enable_banking",
+      "kind": "expense",
+      "description": "Bistró Demo",
+      "amount_band": "20-30 EUR",
+      "expected_category_id": 3
+    },
+    {
+      "id": "hold-food-2",
+      "date": "2026-02-08",
+      "source": "csv",
+      "kind": "expense",
+      "description": "Comedor Río",
+      "amount_band": "30-40 EUR",
+      "expected_category_id": 3
+    },
+    {
+      "id": "hold-pharmacy-1",
+      "date": "2026-01-19",
+      "source": "enable_banking",
+      "kind": "expense",
+      "description": "Farmacia Luna",
+      "amount_band": "10-20 EUR",
+      "expected_category_id": 4
+    },
+    {
+      "id": "hold-pharmacy-2",
+      "date": "2026-02-16",
+      "source": "csv",
+      "kind": "expense",
+      "description": "Botiquín Centro",
+      "amount_band": "20-30 EUR",
+      "expected_category_id": 4
+    },
+    {
+      "id": "hold-home-1",
+      "date": "2026-01-21",
+      "source": "enable_banking",
+      "kind": "expense",
+      "description": "Electricidad Demo",
+      "amount_band": "30-40 EUR",
+      "expected_category_id": 5
+    },
+    {
+      "id": "hold-home-2",
+      "date": "2026-02-20",
+      "source": "csv",
+      "kind": "expense",
+      "description": "Suministro Azul",
+      "amount_band": "10-20 EUR",
+      "expected_category_id": 5
+    },
+    {
+      "id": "hold-salary-1",
+      "date": "2026-01-25",
+      "source": "enable_banking",
+      "kind": "income",
+      "description": "Nómina Aurora",
+      "amount_band": "1000-2000 EUR",
+      "expected_category_id": 6
+    },
+    {
+      "id": "hold-salary-2",
+      "date": "2026-02-25",
+      "source": "csv",
+      "kind": "income",
+      "description": "Empresa Ejemplo Pago",
+      "amount_band": "2000-3000 EUR",
+      "expected_category_id": 6
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+.balance-panel {
+  display: grid;
+  gap: 1rem;
+  background: var(--surface);
+  border-color: var(--rule-strong);
+  box-shadow: none;
+}
+
+.balance-copy {
+  display: grid;
+  gap: 0.34rem;
+  min-width: 0;
+}
+
+.balance-panel span {
+  color: var(--muted);
+}
+
+.balance-panel span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.balance-amount {
+  display: block;
+  min-width: 0;
+  font-size: clamp(2.25rem, 12vw, 4.7rem);
+  line-height: 0.92;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.balance-panel p {
+  margin: 0;
+}
+
+.balance-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  width: fit-content;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--ui-radius-control);
+  background: var(--surface-soft);
+  box-shadow: none;
+  backdrop-filter: none;
+}

@@ -1,0 +1,136 @@
+.app-header {
+  min-height: calc(env(safe-area-inset-top) + 3.75rem);
+  padding: calc(env(safe-area-inset-top) + 0.45rem) 0.85rem 0.45rem;
+  border-block-end: 1px solid var(--rule);
+  background: var(--surface);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.brand-button {
+  min-width: 2.8rem;
+  padding-inline: 0;
+  border-radius: 999px;
+}
+
+.brand-button strong {
+  display: none;
+}
+
+.brand-button:hover {
+  background: var(--surface-soft);
+}
+
+.app-header > span {
+  position: absolute;
+  inset-inline: 4.2rem;
+  text-align: center;
+  pointer-events: none;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.brand-icon {
+  width: 2.05rem;
+  height: 2.05rem;
+  border-radius: 0.62rem;
+  background: transparent;
+  box-shadow: none;
+}
+
+.bottom-nav .bottom-add {
+  border-radius: 999px;
+  background: var(--accent-solid);
+  color: var(--accent-ink);
+  box-shadow: none;
+}
+
+.bottom-nav .bottom-add:hover {
+  background: var(--accent-strong);
+}
+
+.app-shell {
+  width: min(100%, 76rem);
+  padding: 1.12rem 0.85rem calc(env(safe-area-inset-bottom) + 6.8rem);
+}
+
+.view-stack {
+  gap: 1rem;
+}
+
+.rail-nav button.active,
+.sheet-nav button.active,
+.bottom-nav button.active {
+  background: var(--accent-surface);
+  color: var(--accent-text);
+}
+
+.bottom-nav {
+  gap: 0.12rem;
+  min-height: calc(env(safe-area-inset-bottom) + 4.25rem);
+  padding: 0.34rem 0.5rem calc(env(safe-area-inset-bottom) + 0.34rem);
+  border-block-start: 1px solid var(--rule);
+  background: var(--surface);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.bottom-nav button {
+  min-height: 3.1rem;
+  border-radius: 13px;
+  color: var(--ink-2);
+  font-size: 0.64rem;
+  font-weight: 650;
+}
+
+.bottom-nav button.active {
+  box-shadow: none;
+}
+
+.bottom-nav .bottom-add {
+  width: 3.08rem;
+  min-height: 3.08rem;
+}
+
+.sheet-backdrop.open {
+  background: color-mix(in srgb, var(--ink) 18%, transparent);
+  backdrop-filter: none;
+}
+
+.more-sheet {
+  gap: 0.78rem;
+  padding: 0.5rem 1rem calc(env(safe-area-inset-bottom) + 1rem);
+  border: 1px solid var(--ui-separator);
+  border-radius: var(--ui-radius-overlay) var(--ui-radius-overlay) 0 0;
+  background: var(--ui-overlay);
+  box-shadow: var(--ui-overlay-shadow);
+  backdrop-filter: none;
+}
+
+.sheet-handle {
+  background: color-mix(in srgb, var(--ink) 30%, transparent);
+}
+
+.sheet-nav button,
+.sheet-nav a {
+  min-height: 3.05rem;
+  border-radius: var(--ui-radius-control);
+  color: var(--ink);
+}
+
+.desktop-rail {
+  background: var(--surface);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.rail-brand,
+.rail-nav button {
+  border-radius: var(--ui-radius-control);
+}
+
+.rail-nav button {
+  color: var(--ink-2);
+}

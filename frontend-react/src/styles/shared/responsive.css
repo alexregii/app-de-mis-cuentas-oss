@@ -1,0 +1,86 @@
+@media (min-width: 48rem) {
+
+  .dual-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 48rem) {
+  .panel,
+.metric-card,
+.list-card {
+    backdrop-filter: none;
+  }
+}
+
+@media (max-width: 48rem) {
+
+  .panel,
+.metric-card {
+    background: var(--surface);
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 48rem) {
+
+  .icon-button.subtle {
+    width: var(--control-height-lg);
+    min-height: var(--control-height-lg);
+  }
+}
+
+@media (max-width: 40rem) {
+
+  .section-header {
+    display: grid;
+  }
+}
+
+@media (max-width: 40rem) {
+
+  .section-header > .inline-actions,
+.inline-actions:not(:has(.icon-button, .ui-icon-button)),
+.bulk-toolbar,
+.bulk-toolbar .inline-actions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 40rem) {
+
+  .bulk-toolbar {
+    display: grid;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 40rem) {
+
+  .bulk-toolbar > span,
+.bulk-toolbar > small {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 40rem) {
+
+  .bulk-toolbar .inline-actions,
+.inline-actions:not(:has(.icon-button, .ui-icon-button)) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 40rem) {
+
+  .inline-actions:not(:has(.icon-button)) .button,
+.bulk-toolbar .button,
+.section-header .button {
+    width: 100%;
+    min-width: 0;
+    white-space: normal;
+    text-align: center;
+  }
+}

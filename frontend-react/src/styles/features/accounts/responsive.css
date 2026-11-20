@@ -1,0 +1,130 @@
+@media (max-width: 48rem) {
+  .accounts-summary {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .accounts-summary dl {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    order: initial;
+  }
+
+  .accounts-summary .ui-button {
+    align-self: center;
+  }
+
+  .accounts-management-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-detail-workbench {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 40rem) {
+  .accounts-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .accounts-summary dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .accounts-summary .ui-button {
+    width: 100%;
+  }
+
+  .accounts-attention {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .accounts-attention .ui-text-button {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .accounts-section-heading {
+    align-items: start;
+  }
+
+  .account-card {
+    min-height: 7rem;
+  }
+
+  .account-detail-actions {
+    width: 100%;
+  }
+
+  .account-detail-actions .account-detail-open-ledger,
+  .account-detail-actions .account-detail-more-actions {
+    width: 100%;
+  }
+
+  .account-detail-actions .account-detail-open-ledger,
+  .account-detail-more-actions > .ui-overflow-menu__trigger {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .account-detail-header {
+    gap: var(--space-xs);
+  }
+
+  .account-detail .accounts-summary {
+    padding-block: var(--space-sm);
+  }
+
+  .account-detail-workbench {
+    gap: var(--space-sm);
+  }
+
+  .account-detail-bank {
+    gap: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .account-detail-reconciliation-result dl {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xs);
+  }
+
+  .account-detail-reconciliation-result dl > div {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-sm);
+  }
+
+  .account-detail-reconciliation-result dd {
+    margin-top: 0;
+  }
+
+  .account-detail-bank .section-header {
+    display: none;
+  }
+
+  .account-detail-status {
+    align-items: center;
+    min-height: 2.75rem;
+    padding-inline: var(--space-sm);
+    border-block: 1px solid var(--rule);
+  }
+
+  .account-detail-status > i {
+    margin-top: 0;
+  }
+
+  .account-detail-status-label {
+    display: block;
+    color: var(--ink);
+    font-size: 0.84rem;
+  }
+}

@@ -1,0 +1,15 @@
+.ui-input-modality :focus-visible:not(:disabled) {
+  outline: var(--ui-focus-ring-width) solid var(--focus-ring, var(--focus, Highlight));
+  outline-offset: var(--ui-focus-ring-offset);
+}
+
+/* Explicit pointer modality suppresses only the keyboard outline, never DOM focus.
+   Without a known modality the browser's :focus-visible policy remains intact. */
+.ui-input-modality[data-input-modality="pointer"] :focus:not(:disabled) {
+  outline: none;
+}
+
+.ui-input-modality[data-input-modality="keyboard"] :focus:not(:disabled) {
+  outline: var(--ui-focus-ring-width) solid var(--focus-ring, var(--focus, Highlight));
+  outline-offset: var(--ui-focus-ring-offset);
+}

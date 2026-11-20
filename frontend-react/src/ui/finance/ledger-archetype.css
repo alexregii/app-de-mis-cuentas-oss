@@ -1,0 +1,18 @@
+.ui-ledger-archetype__slot,
+.ui-ledger-archetype__results {
+  min-width: 0;
+}
+
+/* The sticky selection toolbar must remain in the archetype scroll context. */
+.ui-ledger-archetype__slot[data-ledger-slot="selection"] {
+  display: contents;
+}
+
+.ui-ledger-archetype {
+  width: 100%;
+}
+
+.ui-ledger-archetype__results:focus-visible {
+  outline: var(--ui-focus-ring-width) solid var(--focus-ring);
+  outline-offset: 4px;
+}

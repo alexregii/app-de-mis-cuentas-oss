@@ -1,0 +1,911 @@
+{
+  "scope": {
+    "basis": "analytics",
+    "basis_label": "Categorías analíticas",
+    "basis_description": "Excluye los movimientos de categorías marcadas para no analizar.",
+    "date_from": "2025-12-01",
+    "date_to": "2026-11-03",
+    "label": "01/12/2025 – 03/11/2026",
+    "is_partial": true,
+    "period": "12"
+  },
+  "summary": {
+    "income": 18200.0,
+    "net_expense": 8542.05,
+    "refunds_applied": 30.0,
+    "analytical_result": 9657.95,
+    "savings_rate": 53.1
+  },
+  "activity_status": "recorded",
+  "comparison": {
+    "scope": {
+      "date_from": "2024-12-28",
+      "date_to": "2025-11-30",
+      "label": "28/12/2024 – 30/11/2025"
+    },
+    "previous": {
+      "income": 8860.0,
+      "net_expense": 4098.0,
+      "refunds_applied": 0.0,
+      "analytical_result": 4762.0,
+      "savings_rate": 53.7
+    },
+    "changes": {
+      "income": {
+        "amount": 9340.0,
+        "percentage": 105.4
+      },
+      "net_expense": {
+        "amount": 4444.05,
+        "percentage": 108.4
+      },
+      "analytical_result": {
+        "amount": 4895.95,
+        "percentage": 102.8
+      },
+      "savings_rate": {
+        "percentage_points": -0.6
+      }
+    },
+    "category_drivers": [
+      {
+        "family_id": 4,
+        "family_name": "Vivienda E2E",
+        "current_net_expense": 5600.0,
+        "previous_net_expense": 2800.0,
+        "change": 2800.0,
+        "current_movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=4&statistics_attribution=purchase",
+        "previous_movements_url": "/?tab=transactions&date_from=2024-12-28&date_to=2025-11-30&analytics=included&category_family=4&statistics_attribution=purchase"
+      },
+      {
+        "family_id": 3,
+        "family_name": "Comida E2E",
+        "current_net_expense": 2897.05,
+        "previous_net_expense": 1298.0,
+        "change": 1599.05,
+        "current_movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=3&statistics_attribution=purchase",
+        "previous_movements_url": "/?tab=transactions&date_from=2024-12-28&date_to=2025-11-30&analytics=included&category_family=3&statistics_attribution=purchase"
+      },
+      {
+        "family_id": 5,
+        "family_name": "Ocio E2E",
+        "current_net_expense": 45.0,
+        "previous_net_expense": 0.0,
+        "change": 45.0,
+        "current_movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=5&statistics_attribution=purchase",
+        "previous_movements_url": "/?tab=transactions&date_from=2024-12-28&date_to=2025-11-30&analytics=included&category_family=5&statistics_attribution=purchase"
+      }
+    ],
+    "category_variations": [
+      {
+        "family_id": 4,
+        "family_name": "Vivienda E2E",
+        "current_net_expense": 5600.0,
+        "previous_net_expense": 2800.0,
+        "change": 2800.0,
+        "percentage": 100.0,
+        "current_movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=4&statistics_attribution=purchase",
+        "previous_movements_url": "/?tab=transactions&date_from=2024-12-28&date_to=2025-11-30&analytics=included&category_family=4&statistics_attribution=purchase"
+      },
+      {
+        "family_id": 3,
+        "family_name": "Comida E2E",
+        "current_net_expense": 2897.05,
+        "previous_net_expense": 1298.0,
+        "change": 1599.05,
+        "percentage": 123.2,
+        "current_movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=3&statistics_attribution=purchase",
+        "previous_movements_url": "/?tab=transactions&date_from=2024-12-28&date_to=2025-11-30&analytics=included&category_family=3&statistics_attribution=purchase"
+      },
+      {
+        "family_id": 5,
+        "family_name": "Ocio E2E",
+        "current_net_expense": 45.0,
+        "previous_net_expense": 0.0,
+        "change": 45.0,
+        "percentage": null,
+        "current_movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=5&statistics_attribution=purchase",
+        "previous_movements_url": "/?tab=transactions&date_from=2024-12-28&date_to=2025-11-30&analytics=included&category_family=5&statistics_attribution=purchase"
+      }
+    ],
+    "previous_activity_status": "recorded",
+    "is_comparable": false
+  },
+  "monthly_series": [
+    {
+      "month": "2025-12",
+      "date_from": "2025-12-01",
+      "date_to": "2025-12-31",
+      "income": 2240.0,
+      "net_expense": 1032.0,
+      "refunds_applied": 0.0,
+      "analytical_result": 1208.0,
+      "savings_rate": 53.9,
+      "activity_status": "recorded",
+      "is_partial": false,
+      "is_complete": true,
+      "result_change": null,
+      "expense_change": null,
+      "detail_url": "/api/statistics/2025/12/?basis=analytics&date_from=2025-12-01&date_to=2026-11-03",
+      "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2025-12-31&analytics=included&statistics_attribution=report"
+    },
+    {
+      "month": "2026-01",
+      "date_from": "2026-01-01",
+      "date_to": "2026-01-31",
+      "income": 2250.0,
+      "net_expense": 1035.0,
+      "refunds_applied": 0.0,
+      "analytical_result": 1215.0,
+      "savings_rate": 54.0,
+      "activity_status": "recorded",
+      "is_partial": false,
+      "is_complete": true,
+      "result_change": 7.0,
+      "expense_change": 3.0,
+      "detail_url": "/api/statistics/2026/1/?basis=analytics&date_from=2025-12-01&date_to=2026-11-03",
+      "movements_url": "/?tab=transactions&date_from=2026-01-01&date_to=2026-01-31&analytics=included&statistics_attribution=report"
+    },
+    {
+      "month": "2026-02",
+      "date_from": "2026-02-01",
+      "date_to": "2026-02-28",
+      "income": 2260.0,
+      "net_expense": 1038.0,
+      "refunds_applied": 0.0,
+      "analytical_result": 1222.0,
+      "savings_rate": 54.1,
+      "activity_status": "recorded",
+      "is_partial": false,
+      "is_complete": true,
+      "result_change": 7.0,
+      "expense_change": 3.0,
+      "detail_url": "/api/statistics/2026/2/?basis=analytics&date_from=2025-12-01&date_to=2026-11-03",
+      "movements_url": "/?tab=transactions&date_from=2026-02-01&date_to=2026-02-28&analytics=included&statistics_attribution=report"
+    },
+    {
+      "month": "2026-03",
+      "date_from": "2026-03-01",
+      "date_to": "2026-03-31",
+      "income": 2270.0,
+      "net_expense": 1041.0,
+      "refunds_applied": 0.0,
+      "analytical_result": 1229.0,
+      "savings_rate": 54.1,
+      "activity_status": "recorded",
+      "is_partial": false,
+      "is_complete": true,
+      "result_change": 7.0,
+      "expense_change": 3.0,
+      "detail_url": "/api/statistics/2026/3/?basis=analytics&date_from=2025-12-01&date_to=2026-11-03",
+      "movements_url": "/?tab=transactions&date_from=2026-03-01&date_to=2026-03-31&analytics=included&statistics_attribution=report"
+    },
+    {
+      "month": "2026-04",
+      "date_from": "2026-04-01",
+      "date_to": "2026-04-30",
+      "income": 2280.0,
+      "net_expense": 1044.0,
+      "refunds_applied": 0.0,
+      "analytical_result": 1236.0,
+      "savings_rate": 54.2,
+      "activity_status": "recorded",
+      "is_partial": false,
+      "is_complete": true,
+      "result_change": 7.0,
+      "expense_change": 3.0,
+      "detail_url": "/api/statistics/2026/4/?basis=analytics&date_from=2025-12-01&date_to=2026-11-03",
+      "movements_url": "/?tab=transactions&date_from=2026-04-01&date_to=2026-04-30&analytics=included&statistics_attribution=report"
+    },
+    {
+      "month": "2026-05",
+      "date_from": "2026-05-01",
+      "date_to": "2026-05-31",
+      "income": 2290.0,
+      "net_expense": 1047.0,
+      "refunds_applied": 0.0,
+      "analytical_result": 1243.0,
+      "savings_rate": 54.3,
+      "activity_status": "recorded",
+      "is_partial": false,
+      "is_complete": true,
+      "result_change": 7.0,
+      "expense_change": 3.0,
+      "detail_url": "/api/statistics/2026/5/?basis=analytics&date_from=2025-12-01&date_to=2026-11-03",
+      "movements_url": "/?tab=transactions&date_from=2026-05-01&date_to=2026-05-31&analytics=included&statistics_attribution=report"
+    },
+    {
+      "month": "2026-06",
+      "date_from": "2026-06-01",
+      "date_to": "2026-06-30",
+      "income": 2300.0,
+      "net_expense": 1120.0,
+      "refunds_applied": 30.0,
+      "analytical_result": 1180.0,
+      "savings_rate": 51.3,
+      "activity_status": "recorded",
+      "is_partial": false,
+      "is_complete": true,
+      "result_change": -63.0,
+      "expense_change": 73.0,
+      "detail_url": "/api/statistics/2026/6/?basis=analytics&date_from=2025-12-01&date_to=2026-11-03",
+      "movements_url": "/?tab=transactions&date_from=2026-06-01&date_to=2026-06-30&analytics=included&statistics_attribution=report"
+    },
+    {
+      "month": "2026-07",
+      "date_from": "2026-07-01",
+      "date_to": "2026-07-31",
+      "income": 2310.0,
+      "net_expense": 1185.05,
+      "refunds_applied": 0.0,
+      "analytical_result": 1124.95,
+      "savings_rate": 48.7,
+      "activity_status": "recorded",
+      "is_partial": false,
+      "is_complete": true,
+      "result_change": -55.05,
+      "expense_change": 65.05,
+      "detail_url": "/api/statistics/2026/7/?basis=analytics&date_from=2025-12-01&date_to=2026-11-03",
+      "movements_url": "/?tab=transactions&date_from=2026-07-01&date_to=2026-07-31&analytics=included&statistics_attribution=report"
+    },
+    {
+      "month": "2026-08",
+      "date_from": "2026-08-01",
+      "date_to": "2026-08-31",
+      "income": 0.0,
+      "net_expense": 0.0,
+      "refunds_applied": 0.0,
+      "analytical_result": 0.0,
+      "savings_rate": null,
+      "activity_status": "unknown",
+      "is_partial": false,
+      "is_complete": true,
+      "result_change": null,
+      "expense_change": null,
+      "detail_url": "/api/statistics/2026/8/?basis=analytics&date_from=2025-12-01&date_to=2026-11-03",
+      "movements_url": "/?tab=transactions&date_from=2026-08-01&date_to=2026-08-31&analytics=included&statistics_attribution=report"
+    },
+    {
+      "month": "2026-09",
+      "date_from": "2026-09-01",
+      "date_to": "2026-09-30",
+      "income": 0.0,
+      "net_expense": 0.0,
+      "refunds_applied": 0.0,
+      "analytical_result": 0.0,
+      "savings_rate": null,
+      "activity_status": "unknown",
+      "is_partial": false,
+      "is_complete": true,
+      "result_change": null,
+      "expense_change": null,
+      "detail_url": "/api/statistics/2026/9/?basis=analytics&date_from=2025-12-01&date_to=2026-11-03",
+      "movements_url": "/?tab=transactions&date_from=2026-09-01&date_to=2026-09-30&analytics=included&statistics_attribution=report"
+    },
+    {
+      "month": "2026-10",
+      "date_from": "2026-10-01",
+      "date_to": "2026-10-31",
+      "income": 0.0,
+      "net_expense": 0.0,
+      "refunds_applied": 0.0,
+      "analytical_result": 0.0,
+      "savings_rate": null,
+      "activity_status": "unknown",
+      "is_partial": false,
+      "is_complete": true,
+      "result_change": null,
+      "expense_change": null,
+      "detail_url": "/api/statistics/2026/10/?basis=analytics&date_from=2025-12-01&date_to=2026-11-03",
+      "movements_url": "/?tab=transactions&date_from=2026-10-01&date_to=2026-10-31&analytics=included&statistics_attribution=report"
+    },
+    {
+      "month": "2026-11",
+      "date_from": "2026-11-01",
+      "date_to": "2026-11-03",
+      "income": 0.0,
+      "net_expense": 0.0,
+      "refunds_applied": 0.0,
+      "analytical_result": 0.0,
+      "savings_rate": null,
+      "activity_status": "unknown",
+      "is_partial": true,
+      "is_complete": false,
+      "result_change": null,
+      "expense_change": null,
+      "detail_url": "/api/statistics/2026/11/?basis=analytics&date_from=2025-12-01&date_to=2026-11-03",
+      "movements_url": "/?tab=transactions&date_from=2026-11-01&date_to=2026-11-03&analytics=included&statistics_attribution=report"
+    }
+  ],
+  "categories": [
+    {
+      "family_id": 4,
+      "family_name": "Vivienda E2E",
+      "color": "#af52de",
+      "gross_expense": 5600.0,
+      "refunds_applied": 0.0,
+      "net_expense": 5600.0,
+      "subcategories": [
+        {
+          "category_id": 4,
+          "name": "Sin subcategoría",
+          "gross_expense": 5600.0,
+          "refunds_applied": 0.0,
+          "net_expense": 5600.0,
+          "percentage_of_family": 100.0,
+          "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&statistics_attribution=purchase&category=4"
+        }
+      ],
+      "percentage": 65.6,
+      "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=4&statistics_attribution=purchase"
+    },
+    {
+      "family_id": 3,
+      "family_name": "Comida E2E",
+      "color": "#ff9f0a",
+      "gross_expense": 2927.05,
+      "refunds_applied": 30.0,
+      "net_expense": 2897.05,
+      "subcategories": [
+        {
+          "category_id": 3,
+          "name": "Sin subcategoría",
+          "gross_expense": 2927.05,
+          "refunds_applied": 30.0,
+          "net_expense": 2897.05,
+          "percentage_of_family": 100.0,
+          "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&statistics_attribution=purchase&category=3"
+        }
+      ],
+      "percentage": 33.9,
+      "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=3&statistics_attribution=purchase"
+    },
+    {
+      "family_id": 5,
+      "family_name": "Ocio E2E",
+      "color": "#5856d6",
+      "gross_expense": 45.0,
+      "refunds_applied": 0.0,
+      "net_expense": 45.0,
+      "subcategories": [
+        {
+          "category_id": 6,
+          "name": "Salidas E2E",
+          "gross_expense": 27.0,
+          "refunds_applied": 0.0,
+          "net_expense": 27.0,
+          "percentage_of_family": 60.0,
+          "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&statistics_attribution=purchase&category=6"
+        },
+        {
+          "category_id": 5,
+          "name": "Sin subcategoría",
+          "gross_expense": 18.0,
+          "refunds_applied": 0.0,
+          "net_expense": 18.0,
+          "percentage_of_family": 40.0,
+          "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&statistics_attribution=purchase&category=5"
+        }
+      ],
+      "percentage": 0.5,
+      "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=5&statistics_attribution=purchase"
+    }
+  ],
+  "basis_reconciliation": {
+    "excluded_summary": {
+      "income": 0.0,
+      "net_expense": 0.0,
+      "analytical_result": 0.0
+    },
+    "excluded_categories": []
+  },
+  "analysis": {
+    "merchants": [
+      {
+        "description": "Alquiler mensual E2E",
+        "net_expense": 5600.0,
+        "last_date": "2026-07-05",
+        "transaction_count": 8,
+        "percentage": 65.6,
+        "active_months": 8,
+        "typical_monthly_expense": 700.0,
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&description=Alquiler+mensual+E2E&statistics_attribution=purchase"
+      },
+      {
+        "description": "Compra supermercado E2E",
+        "net_expense": 2740.0,
+        "last_date": "2026-07-08",
+        "transaction_count": 8,
+        "percentage": 32.1,
+        "active_months": 8,
+        "typical_monthly_expense": 342.5,
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&description=Compra+supermercado+E2E&statistics_attribution=purchase"
+      },
+      {
+        "description": "Compra con reembolso parcial E2E",
+        "net_expense": 70.0,
+        "last_date": "2026-06-14",
+        "transaction_count": 1,
+        "percentage": 0.8,
+        "active_months": 1,
+        "typical_monthly_expense": 70.0,
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&description=Compra+con+reembolso+parcial+E2E&statistics_attribution=purchase"
+      },
+      {
+        "description": "Movimiento manual editable E2E",
+        "net_expense": 42.35,
+        "last_date": "2026-07-11",
+        "transaction_count": 1,
+        "percentage": 0.5,
+        "active_months": 1,
+        "typical_monthly_expense": 42.35,
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&description=Movimiento+manual+editable+E2E&statistics_attribution=purchase"
+      },
+      {
+        "description": "Salida hija E2E",
+        "net_expense": 27.0,
+        "last_date": "2026-07-12",
+        "transaction_count": 1,
+        "percentage": 0.3,
+        "active_months": 1,
+        "typical_monthly_expense": 27.0,
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&description=Salida+hija+E2E&statistics_attribution=purchase"
+      },
+      {
+        "description": "Compra con adjuntos E2E",
+        "net_expense": 24.75,
+        "last_date": "2026-07-13",
+        "transaction_count": 1,
+        "percentage": 0.3,
+        "active_months": 1,
+        "typical_monthly_expense": 24.75,
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&description=Compra+con+adjuntos+E2E&statistics_attribution=purchase"
+      },
+      {
+        "description": "Compra CSV reabrible E2E",
+        "net_expense": 19.95,
+        "last_date": "2026-07-10",
+        "transaction_count": 1,
+        "percentage": 0.2,
+        "active_months": 1,
+        "typical_monthly_expense": 19.95,
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&description=Compra+CSV+reabrible+E2E&statistics_attribution=purchase"
+      },
+      {
+        "description": "Ocio directo E2E",
+        "net_expense": 18.0,
+        "last_date": "2026-07-12",
+        "transaction_count": 1,
+        "percentage": 0.2,
+        "active_months": 1,
+        "typical_monthly_expense": 18.0,
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&description=Ocio+directo+E2E&statistics_attribution=purchase"
+      }
+    ],
+    "recurring": [
+      {
+        "description": "Alquiler mensual E2E",
+        "net_expense": 5600.0,
+        "last_date": "2026-07-05",
+        "transaction_count": 8,
+        "percentage": 65.6,
+        "active_months": 8,
+        "typical_monthly_expense": 700.0,
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&description=Alquiler+mensual+E2E&statistics_attribution=purchase"
+      },
+      {
+        "description": "Compra supermercado E2E",
+        "net_expense": 2740.0,
+        "last_date": "2026-07-08",
+        "transaction_count": 8,
+        "percentage": 32.1,
+        "active_months": 8,
+        "typical_monthly_expense": 342.5,
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&description=Compra+supermercado+E2E&statistics_attribution=purchase"
+      }
+    ],
+    "category_matrix": {
+      "months": [
+        {
+          "month": "2025-12",
+          "is_partial": false,
+          "activity_status": "recorded"
+        },
+        {
+          "month": "2026-01",
+          "is_partial": false,
+          "activity_status": "recorded"
+        },
+        {
+          "month": "2026-02",
+          "is_partial": false,
+          "activity_status": "recorded"
+        },
+        {
+          "month": "2026-03",
+          "is_partial": false,
+          "activity_status": "recorded"
+        },
+        {
+          "month": "2026-04",
+          "is_partial": false,
+          "activity_status": "recorded"
+        },
+        {
+          "month": "2026-05",
+          "is_partial": false,
+          "activity_status": "recorded"
+        },
+        {
+          "month": "2026-06",
+          "is_partial": false,
+          "activity_status": "recorded"
+        },
+        {
+          "month": "2026-07",
+          "is_partial": false,
+          "activity_status": "recorded"
+        },
+        {
+          "month": "2026-08",
+          "is_partial": false,
+          "activity_status": "unknown"
+        },
+        {
+          "month": "2026-09",
+          "is_partial": false,
+          "activity_status": "unknown"
+        },
+        {
+          "month": "2026-10",
+          "is_partial": false,
+          "activity_status": "unknown"
+        },
+        {
+          "month": "2026-11",
+          "is_partial": true,
+          "activity_status": "unknown"
+        }
+      ],
+      "rows": [
+        {
+          "family_id": 4,
+          "family_name": "Vivienda E2E",
+          "net_expense": 5600.0,
+          "values": [
+            {
+              "month": "2025-12",
+              "net_expense": 700.0,
+              "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2025-12-31&analytics=included&category_family=4&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-01",
+              "net_expense": 700.0,
+              "movements_url": "/?tab=transactions&date_from=2026-01-01&date_to=2026-01-31&analytics=included&category_family=4&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-02",
+              "net_expense": 700.0,
+              "movements_url": "/?tab=transactions&date_from=2026-02-01&date_to=2026-02-28&analytics=included&category_family=4&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-03",
+              "net_expense": 700.0,
+              "movements_url": "/?tab=transactions&date_from=2026-03-01&date_to=2026-03-31&analytics=included&category_family=4&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-04",
+              "net_expense": 700.0,
+              "movements_url": "/?tab=transactions&date_from=2026-04-01&date_to=2026-04-30&analytics=included&category_family=4&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-05",
+              "net_expense": 700.0,
+              "movements_url": "/?tab=transactions&date_from=2026-05-01&date_to=2026-05-31&analytics=included&category_family=4&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-06",
+              "net_expense": 700.0,
+              "movements_url": "/?tab=transactions&date_from=2026-06-01&date_to=2026-06-30&analytics=included&category_family=4&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-07",
+              "net_expense": 700.0,
+              "movements_url": "/?tab=transactions&date_from=2026-07-01&date_to=2026-07-31&analytics=included&category_family=4&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-08",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-08-01&date_to=2026-08-31&analytics=included&category_family=4&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-09",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-09-01&date_to=2026-09-30&analytics=included&category_family=4&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-10",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-10-01&date_to=2026-10-31&analytics=included&category_family=4&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-11",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-11-01&date_to=2026-11-03&analytics=included&category_family=4&statistics_attribution=purchase"
+            }
+          ]
+        },
+        {
+          "family_id": 3,
+          "family_name": "Comida E2E",
+          "net_expense": 2897.05,
+          "values": [
+            {
+              "month": "2025-12",
+              "net_expense": 332.0,
+              "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2025-12-31&analytics=included&category_family=3&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-01",
+              "net_expense": 335.0,
+              "movements_url": "/?tab=transactions&date_from=2026-01-01&date_to=2026-01-31&analytics=included&category_family=3&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-02",
+              "net_expense": 338.0,
+              "movements_url": "/?tab=transactions&date_from=2026-02-01&date_to=2026-02-28&analytics=included&category_family=3&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-03",
+              "net_expense": 341.0,
+              "movements_url": "/?tab=transactions&date_from=2026-03-01&date_to=2026-03-31&analytics=included&category_family=3&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-04",
+              "net_expense": 344.0,
+              "movements_url": "/?tab=transactions&date_from=2026-04-01&date_to=2026-04-30&analytics=included&category_family=3&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-05",
+              "net_expense": 347.0,
+              "movements_url": "/?tab=transactions&date_from=2026-05-01&date_to=2026-05-31&analytics=included&category_family=3&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-06",
+              "net_expense": 420.0,
+              "movements_url": "/?tab=transactions&date_from=2026-06-01&date_to=2026-06-30&analytics=included&category_family=3&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-07",
+              "net_expense": 440.05,
+              "movements_url": "/?tab=transactions&date_from=2026-07-01&date_to=2026-07-31&analytics=included&category_family=3&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-08",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-08-01&date_to=2026-08-31&analytics=included&category_family=3&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-09",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-09-01&date_to=2026-09-30&analytics=included&category_family=3&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-10",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-10-01&date_to=2026-10-31&analytics=included&category_family=3&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-11",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-11-01&date_to=2026-11-03&analytics=included&category_family=3&statistics_attribution=purchase"
+            }
+          ]
+        },
+        {
+          "family_id": 5,
+          "family_name": "Ocio E2E",
+          "net_expense": 45.0,
+          "values": [
+            {
+              "month": "2025-12",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2025-12-31&analytics=included&category_family=5&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-01",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-01-01&date_to=2026-01-31&analytics=included&category_family=5&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-02",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-02-01&date_to=2026-02-28&analytics=included&category_family=5&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-03",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-03-01&date_to=2026-03-31&analytics=included&category_family=5&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-04",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-04-01&date_to=2026-04-30&analytics=included&category_family=5&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-05",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-05-01&date_to=2026-05-31&analytics=included&category_family=5&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-06",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-06-01&date_to=2026-06-30&analytics=included&category_family=5&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-07",
+              "net_expense": 45.0,
+              "movements_url": "/?tab=transactions&date_from=2026-07-01&date_to=2026-07-31&analytics=included&category_family=5&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-08",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-08-01&date_to=2026-08-31&analytics=included&category_family=5&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-09",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-09-01&date_to=2026-09-30&analytics=included&category_family=5&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-10",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-10-01&date_to=2026-10-31&analytics=included&category_family=5&statistics_attribution=purchase"
+            },
+            {
+              "month": "2026-11",
+              "net_expense": 0.0,
+              "movements_url": "/?tab=transactions&date_from=2026-11-01&date_to=2026-11-03&analytics=included&category_family=5&statistics_attribution=purchase"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "data_quality": {
+    "uncategorized": {
+      "count": 0,
+      "net_expense": 0.0,
+      "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=uncategorized&statistics_attribution=purchase"
+    },
+    "transfers_excluded": {
+      "count": 1
+    },
+    "possible_bank_transfers": {
+      "count": 1
+    },
+    "basis": "analytics"
+  },
+  "money_map": {
+    "nodes": [
+      {
+        "id": "income",
+        "label": "Ingresos",
+        "kind": "source",
+        "value": 18200.0
+      },
+      {
+        "id": "category:4",
+        "label": "Vivienda E2E",
+        "kind": "category",
+        "value": 5600.0
+      },
+      {
+        "id": "category:3",
+        "label": "Comida E2E",
+        "kind": "category",
+        "value": 2897.05
+      },
+      {
+        "id": "category:5",
+        "label": "Ocio E2E",
+        "kind": "category",
+        "value": 45.0
+      },
+      {
+        "id": "expenses",
+        "label": "Gasto neto",
+        "kind": "destination",
+        "value": 8542.05
+      },
+      {
+        "id": "surplus",
+        "label": "Margen restante",
+        "kind": "surplus",
+        "value": 9657.95
+      }
+    ],
+    "links": [
+      {
+        "source": "income",
+        "target": "category:4",
+        "value": 5600.0,
+        "category_family": 4,
+        "category_families": [
+          4
+        ],
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=4&statistics_attribution=purchase"
+      },
+      {
+        "source": "income",
+        "target": "category:3",
+        "value": 2897.05,
+        "category_family": 3,
+        "category_families": [
+          3
+        ],
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=3&statistics_attribution=purchase"
+      },
+      {
+        "source": "income",
+        "target": "category:5",
+        "value": 45.0,
+        "category_family": 5,
+        "category_families": [
+          5
+        ],
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=5&statistics_attribution=purchase"
+      },
+      {
+        "source": "category:4",
+        "target": "expenses",
+        "value": 5600.0,
+        "category_family": 4,
+        "category_families": [
+          4
+        ],
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=4&statistics_attribution=purchase"
+      },
+      {
+        "source": "category:3",
+        "target": "expenses",
+        "value": 2897.05,
+        "category_family": 3,
+        "category_families": [
+          3
+        ],
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=3&statistics_attribution=purchase"
+      },
+      {
+        "source": "category:5",
+        "target": "expenses",
+        "value": 45.0,
+        "category_family": 5,
+        "category_families": [
+          5
+        ],
+        "movements_url": "/?tab=transactions&date_from=2025-12-01&date_to=2026-11-03&analytics=included&category_family=5&statistics_attribution=purchase"
+      },
+      {
+        "source": "income",
+        "target": "surplus",
+        "value": 9657.95,
+        "category_family": null,
+        "category_families": []
+      }
+    ],
+    "grouping": "Familias con gasto neto positivo."
+  },
+  "coverage": {
+    "imports": {
+      "status": "pending",
+      "pending_count": 2,
+      "last_activity_at": "2026-11-03T01:00:48.096257+00:00"
+    },
+    "banking": {
+      "status": "attention",
+      "pending_count": 2,
+      "last_synced_at": null
+    }
+  }
+}

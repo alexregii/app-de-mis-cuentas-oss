@@ -1,0 +1,45 @@
+.balance-status {
+  border: 1px solid var(--rule);
+  background: var(--surface-soft);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.balance-panel {
+  gap: 1.05rem;
+  border-color: var(--rule-strong);
+  background: var(--surface);
+  box-shadow: none;
+}
+
+.balance-panel span {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.balance-amount {
+  font-size: clamp(2.35rem, 10vw, 4rem);
+  font-weight: 800;
+}
+
+@media (min-width: 48rem) {
+  .balance-panel {
+    grid-template-columns: minmax(9rem, 0.8fr) minmax(14rem, auto) minmax(9rem, 0.8fr);
+    align-items: center;
+  }
+}
+
+@media (min-width: 48rem) {
+
+  .balance-amount {
+    font-size: clamp(3rem, 5.4vw, 3.8rem);
+  }
+}
+
+.balance-status {
+  border-radius: 999px;
+  background: var(--surface-soft);
+  box-shadow: none;
+}

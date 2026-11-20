@@ -1,0 +1,7 @@
+.is-privacy-mode input[type="number"] {
+  -webkit-text-security: disc;
+}
+
+.is-privacy-mode input[type="number"]::selection {
+  background: transparent;
+}

@@ -1,0 +1,41 @@
+:root {
+  /* Structural tokens only. Theme/color tokens live in ui/foundations/themes.css. */
+  --ui-radius-control: 6px;
+  --ui-radius-surface: 8px;
+  --ui-radius-overlay: 12px;
+  --ui-money-size: clamp(1.5rem, 3vw, 2.25rem);
+  --ui-motion-duration: 160ms;
+  --ui-motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ui-focus-ring-width: 2px;
+  --ui-focus-ring-offset: 1px;
+  --ui-page-title-size: clamp(1.45rem, 4vw, 1.9rem);
+  --ui-page-title-line-height: 1.08;
+  --ui-page-title-tracking: -0.03em;
+  --ui-page-description-size: 0.94rem;
+
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  --control-height: 2.75rem;
+  --control-height-sm: 2.5rem;
+  --control-height-lg: 3rem;
+
+  --z-sticky: 20;
+  --z-sheet-backdrop: 35;
+  --z-sheet: 40;
+  --z-tooltip: 50;
+
+  /* Temporary geometry compatibility aliases while feature CSS converges. */
+  --radius: var(--ui-radius-surface);
+  --radius-sm: var(--ui-radius-surface);
+  --radius-control: var(--ui-radius-control);
+
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Inter", "Segoe UI", sans-serif;
+}

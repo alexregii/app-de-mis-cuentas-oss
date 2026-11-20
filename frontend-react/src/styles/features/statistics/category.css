@@ -1,0 +1,134 @@
+.stats-category-layout {
+  display: grid;
+  gap: var(--space-md);
+  min-width: 0;
+}
+
+.stats-category-layout.without-chart {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.category-hero {
+  display: grid;
+  grid-template-columns: minmax(8rem, 10rem) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-md);
+  min-width: 0;
+  padding: var(--space-sm) 0;
+  border-block: 1px solid var(--rule);
+}
+
+.category-donut {
+  display: grid;
+  width: min(100%, 10rem);
+  aspect-ratio: 1;
+  place-items: center;
+  margin: 0;
+  justify-self: center;
+}
+
+.donut-svg,
+.donut-copy,
+.donut-empty-ring {
+  grid-area: 1 / 1;
+}
+
+.donut-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.donut-track,
+.donut-segment {
+  fill: none;
+}
+
+.donut-track {
+  vector-effect: non-scaling-stroke;
+}
+
+.donut-track {
+  stroke: color-mix(in oklch, var(--rule) 82%, var(--paper-2));
+  stroke-width: 12;
+  pointer-events: none;
+}
+
+.donut-segment {
+  stroke-width: 12;
+  cursor: pointer;
+  pointer-events: stroke;
+}
+
+.donut-segment-link {
+  pointer-events: all;
+}
+
+.donut-segment-link:focus {
+  outline: none;
+}
+
+.donut-segment-link:focus-visible .donut-segment {
+  opacity: 0.82;
+  stroke-width: 15;
+}
+
+@media (hover: hover) {
+  .donut-segment-link:hover .donut-segment { opacity: 0.82; stroke-width: 15; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .donut-segment { transition: opacity 160ms ease; }
+}
+
+.donut-copy {
+  z-index: 1;
+  display: grid;
+  place-content: center;
+  width: 62%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--surface);
+  pointer-events: none;
+  text-align: center;
+}
+
+.donut-copy span,
+.category-count {
+  color: var(--ink-2);
+  font-size: 0.8125rem;
+}
+
+.donut-copy strong {
+  color: var(--ink);
+  font-size: 1.12rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.donut-empty-ring {
+  width: 8rem;
+  aspect-ratio: 1;
+  border: 0.8rem solid var(--rule);
+  border-radius: 50%;
+}
+
+.category-summary {
+  display: grid;
+  align-content: center;
+  gap: var(--space-2xs);
+  min-width: 0;
+}
+
+.category-summary p {
+  max-width: 42ch;
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .donut-segment {
+    transition: none;
+  }
+}

@@ -1,0 +1,76 @@
+name: app-de-mis-cuentas-self-hosted
+
+services:
+  web:
+    build: .
+    image: ${APP_SELF_HOSTED_IMAGE:-app-de-mis-cuentas-self-hosted:latest}
+    restart: unless-stopped
+    environment:
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?Set DJANGO_SECRET_KEY in .env}
+      DJANGO_DEBUG: "0"
+      DJANGO_REQUIRE_AUTH: "1"
+      DJANGO_SECURE_COOKIES: "0"
+      DJANGO_CSRF_COOKIE_SECURE: "0"
+      DJANGO_SECURE_SSL_REDIRECT: "0"
+      DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1
+      DJANGO_CSRF_TRUSTED_ORIGINS: http://localhost:3001,http://127.0.0.1:3001
+      ENABLE_BANKING_APP_ID: ""
+      ENABLE_BANKING_PRIVATE_KEY_PATH: ""
+      RESTORE_COORDINATOR_ENABLED: "0"
+      DATABASE_PATH: /app/data/db.sqlite3
+      MEDIA_ROOT: /app/data/media
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./self-hosted-data:/app/data
+      - ./self-hosted-backups:/app/backups
+
+  react-web:
+    build:
+      context: ./frontend-react
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3001:80"
+    depends_on:
+      - web
+
+  backup:
+    build: .
+    image: ${APP_SELF_HOSTED_IMAGE:-app-de-mis-cuentas-self-hosted:latest}
+    restart: unless-stopped
+    environment:
+      DJANGO_DEBUG: "0"
+      DATABASE_PATH: /app/data/db.sqlite3
+      MEDIA_ROOT: /app/data/media
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - >
+        mkdir -p /app/data/scheduler &&
+        while true; do
+          current_day="$$(date +%F)";
+          stamp_file="/app/data/scheduler/backup-daily.stamp";
+          failure_file="/app/data/scheduler/backup-last-failure.stamp";
+          last_day="$$(cat "$$stamp_file" 2>/dev/null || true)";
+          if [ "$$current_day" != "$$last_day" ]; then
+            if python manage.py backup_finance --destination /app/backups --kind scheduled; then
+              echo "$$current_day" > "$$stamp_file";
+              rm -f "$$failure_file";
+            else
+              date +%s > "$$failure_file.tmp" && mv "$$failure_file.tmp" "$$failure_file";
+              echo "Scheduled backup failed for $$current_day; retrying in one hour." >&2;
+            fi;
+          fi;
+          heartbeat_file="/app/data/scheduler/backup-worker-heartbeat";
+          if date +%s > "$$heartbeat_file.tmp" && mv "$$heartbeat_file.tmp" "$$heartbeat_file"; then :; else
+            echo "Backup worker heartbeat could not be updated." >&2;
+          fi;
+          sleep 3600;
+        done
+    healthcheck:
+      disable: true
+    volumes:
+      - ./self-hosted-data:/app/data
+      - ./self-hosted-backups:/app/backups
+    depends_on:
+      web:
+        condition: service_healthy

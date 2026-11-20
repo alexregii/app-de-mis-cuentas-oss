@@ -1,0 +1,159 @@
+/* Canonical product themes. Components consume semantic aliases only. */
+:root,
+[data-theme="mineral"] {
+  color-scheme: light;
+  --paper: #f3f3f3;
+  --paper-2: #eeefee;
+  --surface: #f7f7f7;
+  --surface-strong: #ffffff;
+  --overlay: #f9f9f9;
+  --ink: #1f2322;
+  --ink-2: #4c5552;
+  --muted: #67726e;
+  --ink-3: var(--muted);
+  --rule: #d4d8d7;
+  --rule-strong: #afb8b5;
+  --accent: #406277;
+  --accent-strong: #2f4d60;
+  --accent-soft: #e4e9ec;
+  --positive: #427658;
+  --danger: #a25049;
+  --warning: #7d6539;
+  --info: #4a6c82;
+  --stats-category-01: #4253a4;
+  --stats-category-02: #b14a0e;
+  --stats-category-03: #2b7741;
+  --stats-category-04: #7d4b94;
+  --stats-category-05: #a83763;
+  --stats-category-06: #007a7c;
+  --stats-category-07: #896600;
+  --stats-category-08: #48677a;
+  --stats-category-09: #006d9c;
+  --stats-category-10: #d27a00;
+  --stats-category-11: #5e7d20;
+  --stats-category-12: #b5549a;
+  --stats-category-13: #318674;
+  --stats-category-14: #7b5b2c;
+  --stats-category-15: #d0423c;
+  --stats-category-16: #7452b6;
+}
+
+[data-theme="basalt"] {
+  color-scheme: dark;
+  --paper: #1c1e1e;
+  --paper-2: #222524;
+  --surface: #292d2c;
+  --surface-strong: #2e3130;
+  --overlay: #323635;
+  --ink: #e7e9e9;
+  --ink-2: #bfc5c3;
+  --muted: #98a09e;
+  --ink-3: var(--muted);
+  --rule: #303635;
+  --rule-strong: #454f4d;
+  --accent: #89a3b3;
+  --accent-strong: #b3c5d0;
+  --accent-soft: #2c353a;
+  --positive: #73a588;
+  --danger: #c5837d;
+  --warning: #bfa97d;
+  --info: #84a1b3;
+  --stats-category-01: #a5b0ff;
+  --stats-category-02: #f5a46d;
+  --stats-category-03: #86d7a0;
+  --stats-category-04: #d3a3ed;
+  --stats-category-05: #f08ba8;
+  --stats-category-06: #61d7d0;
+  --stats-category-07: #e2c35f;
+  --stats-category-08: #a4c1d1;
+  --stats-category-09: #71c6f0;
+  --stats-category-10: #ffc36c;
+  --stats-category-11: #b8d975;
+  --stats-category-12: #f0a9d8;
+  --stats-category-13: #73d6b9;
+  --stats-category-14: #d5ac7c;
+  --stats-category-15: #ff8c85;
+  --stats-category-16: #bda4ff;
+}
+
+:root,
+[data-theme="mineral"],
+[data-theme="basalt"] {
+  --surface-soft: var(--paper-2);
+  --accent-solid: var(--accent);
+  --accent-text: var(--accent-strong);
+  --accent-ink: var(--surface-strong);
+  --danger-ink: var(--surface-strong);
+  --accent-border: color-mix(in srgb, var(--accent) 48%, var(--rule));
+  --accent-surface: var(--accent-soft);
+  --income: var(--ink);
+  --expense: var(--ink);
+  --balance: var(--accent);
+  --income-soft: color-mix(in srgb, var(--positive) 13%, var(--surface));
+  --expense-soft: color-mix(in srgb, var(--danger) 13%, var(--surface));
+  --warning-soft: color-mix(in srgb, var(--warning) 14%, var(--surface));
+  --focus-ring: var(--accent-strong);
+  --focus: var(--accent-strong);
+  --ui-canvas: var(--paper);
+  --ui-surface: var(--surface);
+  --ui-overlay: var(--overlay);
+  --ui-separator: var(--rule);
+  --chart-1: var(--accent);
+  --chart-2: var(--entity-2);
+  --chart-3: var(--entity-3);
+  --chart-4: var(--entity-4);
+  --chart-5: var(--entity-6);
+  --chart-6: var(--entity-7);
+  --ui-overlay-shadow: 0 14px 32px color-mix(in srgb, var(--ink) 12%, transparent);
+
+  /* Legacy aliases derive from the canonical theme instead of defining a second palette. */
+  --system-background: var(--paper);
+  --secondary-system-background: var(--surface);
+  --tertiary-system-background: var(--surface-soft);
+  --grouped-background: var(--paper);
+  --label: var(--ink);
+  --secondary-label: var(--ink-2);
+  --tertiary-label: var(--muted);
+  --separator: var(--rule);
+  --separator-strong: var(--rule-strong);
+  --system-blue: var(--accent);
+  --system-blue-pressed: var(--accent-strong);
+  --system-blue-soft: var(--accent-soft);
+  --system-green: var(--positive);
+  --system-green-soft: var(--income-soft);
+  --system-red: var(--danger);
+  --system-red-soft: var(--expense-soft);
+  --system-orange: var(--warning);
+  --system-orange-soft: var(--warning-soft);
+  --shadow: var(--ui-overlay-shadow);
+  --shadow-tight: none;
+  --glass: var(--surface);
+  --glass-strong: var(--surface-strong);
+  --glass-frost: var(--surface-soft);
+  --glass-line: var(--rule);
+  --glass-ink-shadow: none;
+  --glass-inset: none;
+}
+
+:root,
+[data-theme="mineral"] {
+  --entity-1: #55798d;
+  --entity-2: #697c5e;
+  --entity-3: #947054;
+  --entity-4: #786d8c;
+  --entity-5: #a06c64;
+  --entity-6: #5e8580;
+  --entity-7: #8b7c52;
+  --entity-8: #747a82;
+}
+
+[data-theme="basalt"] {
+  --entity-1: #7898a7;
+  --entity-2: #8da080;
+  --entity-3: #ad8a70;
+  --entity-4: #9589a6;
+  --entity-5: #b4847d;
+  --entity-6: #7fa19c;
+  --entity-7: #a69770;
+  --entity-8: #90969b;
+}

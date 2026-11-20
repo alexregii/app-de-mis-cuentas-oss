@@ -1,0 +1,10 @@
+.ui-money-amount {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.ui-money-amount--income { color: var(--income); }
+.ui-money-amount--expense { color: var(--expense); }
+.ui-money-amount--neutral { color: var(--ink); }

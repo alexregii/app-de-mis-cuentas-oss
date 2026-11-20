@@ -1,0 +1,22 @@
+.ui-selection-toolbar { position: sticky; z-index: 1; top: max(var(--space-xs), env(safe-area-inset-top)); display: grid; gap: var(--space-xs); margin: var(--space-xs) 0; padding: var(--space-2xs) 0; border-block: 1px solid color-mix(in srgb, var(--ui-separator) 72%, transparent); background: var(--paper); }
+.ui-selection-toolbar__primary-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: var(--space-xs); }
+.ui-selection-toolbar__summary { min-width: 0; margin: 0; overflow: hidden; color: var(--ink); font-size: .8125rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; transition: opacity 160ms ease-out, transform 160ms ease-out, visibility 0s linear 0s; }
+.ui-selection-toolbar__summary.is-hidden { opacity: 0; pointer-events: none; transform: translateY(-.2rem); visibility: hidden; transition: opacity 160ms ease-out, transform 160ms ease-out, visibility 0s linear 160ms; }
+.ui-selection-toolbar__actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-xs); }
+.ui-selection-toolbar__action { min-width: 0; }
+.ui-selection-toolbar button { min-height: 2.25rem; padding: .4rem .65rem; border: 1px solid var(--ui-separator); border-radius: var(--ui-radius-control); background: transparent; color: var(--ink); font: inherit; font-size: .8125rem; font-weight: 600; }
+.ui-selection-toolbar button:not([aria-disabled="true"]):hover, .ui-selection-toolbar button:not([aria-disabled="true"]):focus-visible { border-color: var(--accent-border); color: var(--accent-text); }
+.ui-selection-toolbar button[aria-disabled="true"] { cursor: not-allowed; border-color: color-mix(in srgb, var(--ui-separator) 70%, transparent); color: var(--muted); }
+.ui-selection-toolbar__reason { margin: 0; color: var(--ink-2); font-size: .75rem; line-height: 1.35; }
+.ui-selection-toolbar__bulk-control { display: flex; flex-wrap: wrap; align-items: end; gap: var(--space-xs); }
+.ui-selection-toolbar__bulk-control .ui-category-combobox { flex: 1 1 14rem; min-width: 0; }
+.ui-selection-toolbar__bulk-control > button { flex: 0 0 auto; }
+.ui-selection-toolbar__actions button { width: 100%; }
+@media (pointer: coarse) { .ui-selection-toolbar button { min-height: 2.75rem; } }
+@media (max-width: 22rem) { .ui-selection-toolbar__actions { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.ui-selection-toolbar__toggle-row { display: flex; justify-content: end; }
+.ui-selection-toolbar__toggle { min-width: 7rem; }
+@media (max-width: 42rem) { .ui-selection-toolbar__toggle-row { display: flex; justify-content: end; } }
+@media (max-width: 32rem) { .ui-selection-toolbar button { min-height: 2.75rem; } }
+@media (prefers-reduced-motion: reduce) { .ui-selection-toolbar__summary { transition: none; } }

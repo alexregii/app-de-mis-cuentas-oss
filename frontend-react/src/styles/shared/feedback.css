@@ -1,0 +1,153 @@
+.offline-empty {
+  display: grid;
+  justify-items: start;
+  gap: 0.7rem;
+  padding: 1.1rem;
+}
+
+.offline-empty > svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--accent);
+}
+
+.offline-empty h2,
+.offline-empty p {
+  margin: 0;
+}
+
+.confirm-dialog-backdrop {
+  position: fixed;
+  z-index: 120;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--space-md);
+  background: color-mix(in srgb, var(--ink) 32%, transparent);
+}
+
+.confirm-dialog {
+  display: grid;
+  gap: var(--space-lg);
+  width: min(100%, 30rem);
+  padding: var(--space-lg);
+  border: 1px solid var(--ui-separator);
+  border-radius: var(--ui-radius-overlay);
+  background: var(--ui-overlay);
+  box-shadow: var(--ui-overlay-shadow);
+}
+
+.confirm-dialog-copy { display: grid; gap: var(--space-sm); }
+.confirm-dialog-copy h2,
+.confirm-dialog-copy p { margin: 0; }
+.confirm-dialog-copy p { color: var(--ink-2); line-height: 1.5; }
+.confirm-dialog-error { margin: 0; color: var(--expense); }
+.confirm-dialog-actions { display: flex; justify-content: flex-end; gap: var(--space-sm); }
+.confirm-dialog .ui-button[aria-disabled="true"] { cursor: not-allowed; opacity: .58; }
+
+@media (max-width: 40rem) {
+  .confirm-dialog-actions { flex-direction: column-reverse; }
+  .confirm-dialog-actions .ui-button { width: 100%; }
+}
+
+.skeleton-panel {
+  min-height: 8rem;
+  display: grid;
+  gap: 0.8rem;
+  align-content: center;
+}
+
+.skeleton-copy {
+  display: grid;
+  gap: 0.55rem;
+  width: min(24rem, 100%);
+}
+
+.skeleton-line {
+  display: block;
+  height: 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--surface-soft), color-mix(in oklch, var(--surface-soft) 52%, var(--surface-strong)), var(--surface-soft));
+  background-size: 220% 100%;
+  animation: skeleton-shimmer 1.3s ease-in-out infinite;
+}
+
+.skeleton-line.short {
+  width: 42%;
+}
+
+.skeleton-line.medium {
+  width: 68%;
+}
+
+.loading-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  color: var(--ink-2);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 120% 0; }
+  100% { background-position: -120% 0; }
+}
+
+.message,
+.empty-state {
+  padding: 0.92rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--ui-radius-surface);
+  background: var(--surface);
+  color: var(--ink-2);
+}
+
+.empty-state--plain {
+  padding: 0;
+  border-color: transparent;
+  border-radius: 0;
+  background: transparent;
+  transition:
+    padding var(--ui-motion-duration) var(--ui-motion-ease),
+    border-color var(--ui-motion-duration) var(--ui-motion-ease),
+    background-color var(--ui-motion-duration) var(--ui-motion-ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .empty-state--plain { transition: none; }
+}
+
+.message.error,
+.field-error {
+  color: var(--expense);
+}
+
+.message.success {
+  color: var(--income);
+}
+
+.loading-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.spin {
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

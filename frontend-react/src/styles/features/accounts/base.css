@@ -1,0 +1,530 @@
+.connection-row span,
+.connection-row small,
+.account-card span,
+.account-card small {
+  color: var(--muted);
+}
+
+.account-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.account-card-layout { min-width: 0; }
+
+.connection-row {
+  display: grid;
+  gap: 0.75rem;
+  padding-block: 0.82rem;
+  border-block-end: 1px solid var(--rule);
+}
+
+.connection-row:last-child {
+  border-block-end: 0;
+}
+
+.connection-row > div:first-child {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.account-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.account-card {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.account-card i {
+  width: 2rem;
+  height: 0.35rem;
+  border-radius: 999px;
+}
+
+.account-card b {
+  font-size: 1.56rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.connection-row {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.connection-row > .inline-actions {
+  align-self: start;
+}
+
+.account-detail-header {
+  display: grid;
+  gap: 0.24rem;
+  padding: 0.25rem 0 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.account-detail-header h1 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.45rem, 4vw, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.account-detail-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.accounts-summary {
+  display: grid;
+  grid-template-columns: minmax(18rem, 1fr) auto;
+  align-items: stretch;
+  gap: 1rem;
+  margin-top: 0.7rem;
+  padding-block: 1rem;
+  border-block: 1px solid var(--rule);
+}
+
+.ui-page-header__supplement > .accounts-summary {
+  padding-block-end: 0;
+  border-block-end: 0;
+}
+
+.accounts-summary dt {
+  color: var(--ink-2);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.accounts-summary dl {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.accounts-summary dl div {
+  display: grid;
+  gap: 0.2rem;
+  padding-left: 0.8rem;
+  border-left: 1px solid var(--rule);
+}
+
+.accounts-summary dd {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.accounts-summary dl div:first-child dd {
+  font-size: 1.28rem;
+}
+
+.accounts-summary .ui-button {
+  align-self: center;
+}
+
+.accounts-management-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
+  align-items: start;
+  gap: 1rem;
+}
+
+.bank-connections-panel,
+.accounts-management-grid .collapsible-panel {
+  height: 100%;
+}
+
+.bank-connections-panel.has-attention {
+  border-color: color-mix(in srgb, var(--warning) 42%, var(--rule));
+}
+
+.accounts-attention {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.65rem;
+  margin-block: 0.85rem;
+  padding: 0.72rem 0.8rem;
+  border: 1px solid color-mix(in srgb, var(--warning) 35%, var(--rule));
+  border-radius: var(--ui-radius-surface);
+  background: var(--warning-soft);
+}
+
+.accounts-attention > svg {
+  color: var(--warning);
+}
+
+.accounts-attention div {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.accounts-attention span {
+  color: var(--ink-2);
+  font-size: 0.78rem;
+}
+
+.connection-main {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.connection-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.connection-title i {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--income);
+}
+
+.connection-row.needs-attention .connection-title i {
+  background: var(--warning);
+}
+
+.accounts-registry {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.accounts-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.55rem;
+}
+
+.accounts-section-heading div {
+  display: grid;
+  gap: 0.18rem;
+}
+
+.accounts-section-heading h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.accounts-section-heading p,
+.accounts-section-heading > span {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 0.8rem;
+}
+
+.account-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.account-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.42rem 0.7rem;
+  align-items: start;
+  min-height: 8rem;
+  padding: 0.85rem 1rem;
+}
+
+.account-card > i {
+  grid-row: 1 / -1;
+  width: 0.3rem;
+  height: 100%;
+  min-height: 2.4rem;
+  border-radius: 999px;
+}
+
+.account-card-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.account-card-heading > div {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.account-card span,
+.account-card small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-card strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-card b {
+  flex: 0 0 auto;
+  font-size: 1.2rem;
+}
+
+.account-card > small,
+.account-card > .account-card-actions {
+  grid-column: 2;
+}
+
+.account-card-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.account-card-actions > .ui-overflow-menu {
+  justify-self: end;
+}
+
+#bank-connections {
+  scroll-margin-top: 5rem;
+}
+
+.inactive-accounts {
+  border-top: 1px solid var(--rule);
+  padding-top: 0.7rem;
+}
+
+.inactive-accounts summary {
+  min-height: 44px;
+  color: var(--ink-2);
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 750;
+}
+
+.inactive-accounts .account-grid {
+  margin-top: 0.65rem;
+}
+
+.inactive-account {
+  opacity: 0.78;
+}
+
+.account-detail-header { gap: var(--space-md); }
+
+.account-detail-back {
+  justify-self: start;
+  min-height: 2rem;
+}
+
+.account-detail-identity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-width: 0;
+}
+
+.account-detail-identity > i {
+  width: 0.35rem;
+  align-self: stretch;
+  min-height: 2.65rem;
+  border-radius: var(--radius-pill);
+}
+
+.account-detail-identity > div {
+  min-width: 0;
+}
+
+.account-detail .accounts-summary {
+  margin-top: 0;
+}
+
+.account-detail-actions {
+  position: relative;
+  z-index: var(--z-tooltip);
+  flex-wrap: wrap;
+}
+
+.account-detail-error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.account-detail-workbench {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.62fr) minmax(0, 1.38fr);
+  align-items: start;
+  gap: var(--space-md);
+}
+
+.account-detail-bank,
+.account-detail-reconciliation,
+.account-detail-activity {
+  display: grid;
+  align-content: start;
+  gap: var(--space-md);
+}
+
+.account-detail-bank-balance {
+  display: grid;
+  gap: var(--space-xs);
+  margin: 0;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--rule);
+}
+
+.account-detail-bank-balance > div {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, 0.8fr) minmax(0, 1.2fr);
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+
+.account-detail-bank-balance dt {
+  color: var(--ink-2);
+  font-size: 0.82rem;
+}
+
+.account-detail-bank-balance dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.account-detail-bank-balance > div:first-child dd {
+  font-weight: 680;
+}
+
+.account-detail-reconciliation {
+  gap: var(--space-sm);
+}
+
+.account-detail-reconciliation.needs-attention {
+  border-color: color-mix(in srgb, var(--warning) 48%, var(--rule));
+}
+
+.account-detail-reconciliation-form {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.account-detail-reconciliation-form label {
+  display: grid;
+  gap: var(--space-3xs);
+  color: var(--ink-2);
+  font-size: 0.84rem;
+  font-weight: 680;
+}
+
+.account-detail-reconciliation-form input {
+  min-width: 0;
+}
+
+.account-detail-reconciliation-form .ui-button {
+  justify-self: start;
+}
+
+.account-detail-reconciliation-form .ui-button[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: .58;
+}
+
+.account-detail-reconciliation-transition {
+  overflow: hidden;
+}
+
+.account-detail-reconciliation-result {
+  display: grid;
+  gap: var(--space-xs);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--rule);
+  font-size: 0.9rem;
+}
+
+.account-detail-reconciliation-result dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-xs);
+  margin: 0;
+}
+
+.account-detail-reconciliation-result dt {
+  color: var(--ink-2);
+  font-size: 0.74rem;
+}
+
+.account-detail-reconciliation-result dd {
+  margin: var(--space-3xs) 0 0;
+  font-variant-numeric: tabular-nums;
+  font-weight: 720;
+}
+
+.account-detail-reconciliation-hint {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.account-detail-reconciliation-actions {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-3xs);
+}
+
+.account-detail-status {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  color: var(--ink-2);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.account-detail-status > i {
+  flex: 0 0 auto;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-top: 0.4rem;
+  border-radius: 50%;
+  background: var(--income);
+}
+
+.account-detail-status p {
+  margin: 0;
+}
+
+.account-detail-status-label {
+  display: none;
+}
+
+.account-detail-bank.needs-attention {
+  border-color: color-mix(in srgb, var(--warning) 48%, var(--rule));
+}
+
+.account-detail-bank.needs-attention .account-detail-status > i {
+  background: var(--warning);
+}
+
+.account-detail-activity .section-header {
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--rule);
+}

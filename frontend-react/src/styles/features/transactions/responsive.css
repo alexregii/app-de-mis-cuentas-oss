@@ -1,0 +1,32 @@
+@media (max-width: 40rem) {
+
+  .transaction-composer-actions { display:grid; grid-template-columns:1fr 1fr; }
+  .transaction-composer-actions p { grid-column:1 / -1; }
+
+  .transaction-allocation-editor__row { grid-template-columns: minmax(0, 1fr) minmax(6.5rem, 0.58fr) auto; gap: var(--space-3xs); }
+
+  .transactions-statistics-context {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .transactions-statistics-context .secondary-action {
+    width: 100%;
+  }
+
+.entry-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 23rem) {
+  .transaction-composer-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .transaction-composer-actions .ui-button {
+    width: 100%;
+  }
+
+  .transaction-allocation-editor__row { grid-template-columns: minmax(0, 1fr); }
+  .transaction-allocation-editor__row > .ui-button { justify-self: start; }
+}

@@ -1,0 +1,120 @@
+.section-heading p {
+  color: var(--ink-2);
+}
+
+.panel,
+.metric-card,
+.list-card,
+.bulk-toolbar,
+.chip {
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.panel,
+.metric-card {
+  border-radius: var(--ui-radius-surface);
+}
+
+.panel {
+  padding: 1.05rem;
+}
+
+.section-heading h2 {
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 750;
+}
+
+.metric-card span {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.chip {
+  border-radius: 999px;
+  background: var(--surface-soft);
+}
+
+.metric-card {
+  gap: 0.48rem;
+  padding: 1rem;
+}
+
+.metric-card strong {
+  font-size: 1.55rem;
+  font-weight: 800;
+}
+
+.metric-card.income,
+.metric-card.expense,
+.metric-card.balance,
+.metric-card.validation {
+  background: var(--surface);
+}
+
+.progress {
+  background: var(--accent-surface);
+}
+
+label,
+.form-block {
+  color: var(--ink-2);
+  font-weight: 650;
+}
+
+.button,
+.icon-button {
+  min-height: var(--control-height);
+  border: 1px solid var(--ui-separator);
+  border-radius: var(--ui-radius-control);
+  background: var(--ui-surface);
+  box-shadow: none;
+  font-weight: 700;
+}
+
+.button:hover,
+.icon-button:hover,
+.list-card:hover {
+  border-color: var(--accent-border);
+  background: color-mix(in srgb, var(--accent-surface) 36%, var(--ui-surface));
+}
+
+.button.primary,
+.icon-button.primary {
+  border-color: var(--accent-solid);
+  background: var(--accent-solid);
+  color: var(--accent-ink);
+}
+
+.button.primary:hover,
+.icon-button.primary:hover {
+  border-color: var(--accent-strong);
+  background: var(--accent-strong);
+}
+
+.button.secondary {
+  background: var(--ui-surface);
+}
+
+.icon-button.subtle {
+  border-color: transparent;
+  background: transparent;
+}
+
+.list-card {
+  border-radius: var(--ui-radius-surface);
+}
+
+.list-card.selected {
+  border-color: var(--accent-border);
+  background: var(--accent-surface);
+}
+
+.message {
+  border-radius: var(--ui-radius-surface);
+}

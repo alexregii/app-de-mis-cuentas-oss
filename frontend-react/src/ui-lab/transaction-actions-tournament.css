@@ -1,0 +1,7 @@
+.ui-lab-action-toggles button { display: inline-flex; align-items: center; gap: var(--space-2xs); }
+.ui-lab-action-toggles svg { width: .9rem; height: .9rem; }
+.ui-lab-action-stack { min-width: 0; margin-top: var(--space-sm); }
+.ui-lab-action-row { position: relative; min-width: 0; }
+
+.ui-lab-action-stack--menu .ui-lab-action-row { padding-right: 2.5rem; }
+.ui-lab-action-stack--menu .ui-lab-action-row__menu { position: absolute; top: var(--space-sm); right: 0; }

@@ -1,0 +1,278 @@
+.quick-picker {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-block: 0.1rem 0.2rem;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.quick-picker button {
+  flex: 0 0 auto;
+  display: grid;
+  gap: 0.2rem;
+  min-width: 8.4rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--ui-radius-control);
+  background: var(--surface);
+  color: var(--ink);
+  text-align: start;
+  box-shadow: none;
+}
+
+.quick-picker button.selected {
+  border-color: color-mix(in oklch, var(--accent) 54%, var(--rule));
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.quick-picker small {
+  color: var(--ink-2);
+  font-weight: 700;
+}
+
+.category-picker button {
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  min-width: max-content;
+  max-width: 15rem;
+}
+
+.category-picker i {
+  width: 0.62rem;
+  height: 0.62rem;
+  border-radius: 999px;
+  background: var(--chip-color, var(--accent));
+}
+
+.category-picker span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.transaction-attachments-dialog { position: fixed; z-index: var(--z-modal, 40); inset: 50% auto auto 50%; width: min(32rem, calc(100vw - 2rem)); max-width: 100%; margin: 0; padding: var(--space-md); border: 1px solid var(--ui-separator); border-radius: var(--ui-radius-overlay); background: var(--ui-overlay); color: var(--ink); box-shadow: var(--ui-overlay-shadow); transform: translate(-50%, -50%); }
+.transaction-attachments-dialog::backdrop { background: color-mix(in srgb, var(--ink) 36%, transparent); }
+.transaction-attachments-dialog__heading { display: flex; align-items: start; justify-content: space-between; gap: var(--space-md); }
+.transaction-attachments-dialog__heading p { margin: 0; color: var(--ink-2); font-size: .75rem; }
+.transaction-attachments-dialog__heading h2 { margin: var(--space-3xs) 0 0; font-size: 1.1rem; overflow-wrap: anywhere; }
+.transaction-attachments-dialog__list { display: grid; gap: var(--space-xs); margin: var(--space-md) 0 0; padding: 0; list-style: none; }
+.transaction-attachments-dialog__list a { color: var(--accent-strong); text-decoration: underline; text-underline-offset: .15em; overflow-wrap: anywhere; }
+
+.composer-panel {
+  align-self: start;
+}
+
+.transaction-composer-actions { display:flex; align-items:center; flex-wrap:wrap; gap:var(--space-xs); padding-block:var(--space-2xs); }
+.transactions-saved-views { display:flex; align-items:end; flex-wrap:wrap; gap:var(--space-2xs); margin-block-end:var(--space-2xs); }
+.transactions-saved-views__select,
+.transactions-saved-views__editor > label { display:grid; gap:var(--space-3xs); color:var(--ink-2); font-size:.78rem; }
+.transactions-saved-views__select { flex:1 1 12rem; max-width:22rem; }
+.transactions-saved-views__editor { display:flex; align-items:end; flex-wrap:wrap; gap:var(--space-2xs); flex:1 0 100%; padding-block:var(--space-2xs); }
+.transactions-saved-views__editor .transactions-saved-views__relative { display:flex; align-items:center; gap:var(--space-3xs); min-height:44px; }
+.transactions-saved-views__feedback,
+.transactions-saved-views__hint { flex:1 0 100%; margin:0; color:var(--ink-2); font-size:.78rem; }
+.transactions-saved-views__feedback[role="alert"] { color:var(--danger-strong, var(--accent-strong)); }
+.transactions-page .ui-ledger-header { border-bottom: 0; }
+.transactions-page .ui-selection-toolbar { margin: 0; padding-block: 0 var(--space-xs); border-block: 0; }
+.transactions-page .ui-ledger-filter-strip { margin-top: 0; }
+.transaction-composer-actions .ui-button { min-height:44px; }
+.transaction-composer-actions p { flex:1 1 16rem; margin:0; color:var(--ink-2); font-size:.84rem; }
+.transaction-composer-open { display:grid; gap:var(--space-md); }
+.transaction-composer-open .ui-button[aria-disabled="true"] { cursor:not-allowed; opacity:.58; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .transaction-composer-actions,
+  .transaction-composer-open > .composer-panel {
+    animation: transaction-composer-enter var(--ui-motion-duration) var(--ui-motion-ease) both;
+  }
+}
+
+@keyframes transaction-composer-enter {
+  from { opacity: 0; transform: translateY(-0.35rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.quick-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem;
+  border: 1px dashed var(--rule-strong);
+  border-radius: var(--ui-radius-surface);
+  color: var(--muted);
+  background: var(--surface);
+}
+
+.entry-form {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.transaction-allocation-editor {
+  display: grid;
+  gap: var(--space-xs);
+  min-width: 0;
+  padding-block-start: var(--space-xs);
+  border-block-start: 1px solid var(--rule);
+}
+
+.transaction-allocation-editor__heading h4 {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.transaction-allocation-editor__heading p {
+  margin: var(--space-3xs) 0 0;
+  color: var(--ink-2);
+  font-size: 0.8rem;
+}
+
+.transaction-allocation-editor__list {
+  display: grid;
+  gap: var(--space-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.transaction-allocation-editor__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(7.5rem, 0.55fr) auto;
+  align-items: end;
+  gap: var(--space-xs);
+  min-width: 0;
+}
+
+.transaction-allocation-editor__row > .ui-field { min-width: 0; }
+.transaction-allocation-editor__row > .ui-button { min-height: var(--control-height); }
+
+.transaction-allocation-editor__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.transaction-allocation-editor__total {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3xs);
+  margin: 0;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.transaction-allocation-editor__feedback {
+  margin: 0;
+  color: var(--danger-strong, var(--accent-strong));
+  font-size: 0.8rem;
+}
+.filter-clear-all { font-size: 0.8rem; }
+
+.transactions-report-filter-lock .section-header {
+  margin: 0;
+}
+
+.transactions-statistics-context {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border: 1px solid color-mix(in oklch, var(--accent) 32%, var(--rule));
+  border-radius: var(--ui-radius-surface);
+  background: color-mix(in oklch, var(--accent-soft) 58%, var(--surface));
+}
+
+.transactions-statistics-context-copy {
+  display: grid;
+  min-width: 0;
+}
+
+.transactions-statistics-context-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.transactions-statistics-context h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.94rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.transactions-statistics-context-description {
+  max-width: 68ch;
+  margin: var(--space-2xs) 0 0;
+  color: var(--ink-2);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.transactions-statistics-context-scope,
+.transactions-attribution-summary {
+  margin: 0;
+}
+
+.transactions-statistics-context-scope > div {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2xs);
+  min-width: 0;
+}
+
+.transactions-statistics-context-scope dt {
+  color: var(--ink-2);
+  font-size: 0.72rem;
+  font-weight: 750;
+}
+
+.transactions-statistics-context-scope dd {
+  overflow-wrap: anywhere;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 780;
+}
+
+.transactions-attribution-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  gap: var(--space-2xs) var(--space-sm);
+  margin-block-start: var(--space-sm);
+  padding-block-start: var(--space-sm);
+  border-block-start: 1px solid color-mix(in oklch, var(--accent) 22%, var(--rule));
+}
+
+.transactions-attribution-summary div {
+  display: grid;
+  gap: var(--space-3xs);
+  min-width: 0;
+}
+
+.transactions-attribution-summary dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 720;
+}
+
+.transactions-attribution-summary dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.88rem;
+  font-weight: 780;
+  font-variant-numeric: tabular-nums;
+}
+
+.transactions-statistics-context .secondary-action {
+  flex: 0 0 auto;
+  min-height: var(--control-height);
+  white-space: nowrap;
+}

@@ -1,0 +1,52 @@
+.compact-label {
+  margin-top: 0.2rem;
+}
+
+.compact-check-row {
+  margin-top: 0.15rem;
+}
+
+.select-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.select-row input {
+  width: 1rem;
+  height: 1rem;
+}
+
+label,
+.form-block {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--ink-2);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.form-block h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.96rem;
+}
+
+label.full {
+  grid-column: 1 / -1;
+}
+
+.check-row {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.check-row input {
+  width: 1.15rem;
+  height: 1.15rem;
+}
