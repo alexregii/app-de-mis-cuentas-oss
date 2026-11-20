@@ -52,3 +52,9 @@ datos sintéticos. La distribución incluye una guía común para agentes de có
 y entradas ligeras para Claude Code, Gemini CLI y GitHub Copilot. El nuevo
 helper crea `.env` con una clave aleatoria sin mostrarla ni sobrescribir una
 configuración existente. No cambia el comportamiento financiero de la app.
+
+## v0.1.3 — captura móvil de viewport
+
+El README reemplaza la captura móvil de página completa por una captura
+390×1000 del viewport, legible al abrir el repositorio. Usa una cuenta y un
+saldo ficticios; el código de la aplicación no cambia.

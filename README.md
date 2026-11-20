@@ -26,12 +26,12 @@ instalación personal que administras en tu propio equipo.
 
 ## También está cuidada para móvil
 
-La navegación se adapta a una barra inferior y las vistas se reorganizan para
-pantallas estrechas. Esta captura de prueba muestra Estadísticas a 390 px, con
-datos sintéticos:
+La navegación inferior y las tarjetas se reorganizan para una pantalla
+estrecha. Esta captura es un viewport móvil de 390×1000, no una página completa;
+la cuenta y el saldo son sintéticos:
 
 <p align="center">
-  <img src="frontend-react/e2e/screenshots/statistics-full-390-chromium.png" alt="Vista de estadísticas adaptada a una pantalla móvil de 390 px, con datos E2E sintéticos" width="320" />
+  <img src="docs/images/mobile-walkthrough/accounts-390.png" alt="Vista móvil de Cuentas con resumen, saldo ficticio y navegación inferior" width="390" />
 </p>
 
 ## Pruébala con datos ficticios
