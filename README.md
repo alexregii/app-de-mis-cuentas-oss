@@ -1,102 +1,119 @@
-# APP de mis cuentas
+<div align="center">
+  <img src="frontend-react/public/brand/logo.svg" alt="" width="76" />
+  <h1>APP de mis cuentas</h1>
+  <p><strong>Deja de llevar tus finanzas a mano en Excel.</strong></p>
+  <p>Importa CSV. Revisa los movimientos. Exporta a Excel.<br />Los datos se quedan en tu equipo.</p>
+  <p>
+    <a href="https://github.com/alexregii/app-de-mis-cuentas-oss/releases/latest">Última release</a>
+    &nbsp;·&nbsp; <a href="LICENSE">Licencia MIT</a>
+    &nbsp;·&nbsp; Autoalojada
+  </p>
+</div>
 
-App personal y autoalojada para dejar de mantener manualmente las finanzas en
-una hoja de cálculo. Cada instalación es para una persona y sus datos permanecen
-en su propio equipo.
+<p align="center">
+  <img src="docs/images/csv-walkthrough/csv-statistics.png" alt="Estadísticas del ejemplo CSV: ingresos 1.850 euros y gasto neto 887,44 euros" width="100%" />
+</p>
 
-Puedes importar movimientos desde CSV, clasificarlos con reglas, revisar los
-pendientes, consultar estadísticas y exportarlos a Excel. No necesitas conectar
-una cuenta bancaria para probar el flujo de CSV.
+## Para quien ya usa una hoja de cálculo
 
-La licencia del código es [MIT](LICENSE).
+APP de mis cuentas quita trabajo manual al importar y revisar movimientos. No
+intenta ser una plataforma bancaria ni un servicio en la nube: es una
+instalación personal que administras en tu propio equipo.
 
-## Empezar
+| Importa | Revisa | Entiende | Exporta |
+| --- | --- | --- | --- |
+| Movimientos CSV | Categorías y duplicados antes de confirmar | Estadísticas con límites claros | Un Excel con tus movimientos |
 
-Sigue la [guía para instalar la app en tu equipo con Docker](docs/self-hosted-quickstart.md).
-El acceso inicial queda limitado a localhost y usa datos locales.
+## También está cuidada para móvil
 
-Requisitos de ejecución: Docker Desktop con Docker Compose v2 en Windows,
-macOS o Linux. Para desarrollo desde el código fuente, usa Python 3.13 y Node
-20.19.5, tal como indican `.python-version` y `.node-version`.
+La navegación se adapta a una barra inferior y las vistas se reorganizan para
+pantallas estrechas. Esta captura de prueba muestra Estadísticas a 390 px, con
+datos sintéticos:
 
-## Probar el recorrido con CSV
+<p align="center">
+  <img src="frontend-react/e2e/screenshots/statistics-full-390-chromium.png" alt="Vista de estadísticas adaptada a una pantalla móvil de 390 px, con datos E2E sintéticos" width="320" />
+</p>
 
-El ejemplo usa datos ficticios, no necesita conectar un banco y parte de una
-instancia vacía. El perfil **CSV genérico** espera las columnas
-`date,description,amount,category,subcategory`, fechas `AAAA-MM-DD`, gastos con
-importe negativo e ingresos con importe positivo.
+## Pruébala con datos ficticios
 
-1. En **Cuentas**, añade una cuenta corriente llamada `Cuenta de ejemplo` con
-   saldo inicial `0`.
-2. En **Revisión → Importar CSV**, elige esa cuenta y **CSV genérico**. Sube
+El repositorio incluye dos CSV de ejemplo para recorrer el flujo completo:
+
+1. Crea una cuenta corriente llamada `Cuenta de ejemplo` con saldo inicial `0`.
+2. En **Revisión → Importar CSV**, usa **CSV genérico** y sube
    [`01-enero.csv`](examples/csv/01-enero.csv).
-3. En la fila `Control Neo Wave`, cambia `Compras personales · Tecnología` por
-   `Ocio · Videojuegos`, guarda la categoría y pulsa **Confirmar lote seguro**.
+3. En `Control Neo Wave`, cambia `Compras personales · Tecnología` por
+   `Ocio · Videojuegos` y confirma el lote seguro.
 4. Sube [`02-solapamiento-febrero.csv`](examples/csv/02-solapamiento-febrero.csv).
-   La compra de `Supermercado La Plaza` se reconoce como duplicada. Pulsa
-   **Omitir** en esa fila y después **Confirmar lote seguro** para las dos
-   filas nuevas.
-5. En **Movimientos** aparecen seis movimientos. En **Estadísticas**, abre
-   **Cambiar informe → Personalizado**, indica `01/01/2026` y `28/02/2026` y
-   pulsa **Aplicar rango**: ingresos `1.850,00 €`, gasto neto `887,44 €` y
-   resultado `962,56 €`.
-6. En **Ajustes → Datos y recuperación**, pulsa **Descargar Excel**. El archivo
-   del ejemplo contiene esos seis movimientos.
+   Omite la compra duplicada de `Supermercado La Plaza` y confirma las dos filas
+   nuevas.
+5. Verás seis movimientos. En **Estadísticas**, selecciona el periodo
+   personalizado del 01/01/2026 al 28/02/2026: ingresos `1.850,00 €`, gasto neto
+   `887,44 €` y resultado `962,56 €`.
+6. En **Ajustes → Datos y recuperación**, descarga el Excel del ejemplo.
 
-La comparación con el periodo anterior aparecerá como no comparable porque la
-instancia de ejemplo solo tiene datos de enero y febrero. Los meses sin datos no
-demuestran que el gasto haya sido cero.
+Los meses sin datos aparecen como no comparables; no se interpretan como gasto
+cero.
 
-![Corrección de la categoría del movimiento de ejemplo durante la revisión CSV](docs/images/csv-walkthrough/csv-category-correction.png)
+## Instálala en tu equipo
 
-![La compra repetida aparece marcada como posible duplicado](docs/images/csv-walkthrough/csv-duplicate-review.png)
+Necesitas Docker Desktop con Docker Compose v2 y Python solo para crear la clave
+local; la aplicación se ejecuta en contenedores. La guía explica el primer
+usuario y cubre Windows, macOS y Linux:
 
-![Resultado de Estadísticas para el rango de enero a febrero](docs/images/csv-walkthrough/csv-statistics.png)
+**[Guía de instalación rápida](docs/self-hosted-quickstart.md)**
 
-## Desarrollo
+En resumen, el flujo es:
 
-Instala los requisitos fijados con `python scripts/bootstrap.py`. Para ejecutar
-las pruebas backend usa `python manage.py test`; desde `frontend-react/`, ejecuta
-`npm test` y `npm run build`. Las versiones requeridas son Python 3.13 y Node
-20.19.5.
+```sh
+git clone https://github.com/alexregii/app-de-mis-cuentas-oss.git
+cd app-de-mis-cuentas-oss
+python scripts/init_self_hosted_env.py
+docker compose -f compose.yml up --build -d web react-web backup
+docker compose -f compose.yml ps
+docker compose -f compose.yml exec web python manage.py createsuperuser
+```
 
-## Datos, alcance y límites
+El comando inicial `python` puede llamarse `python3` en macOS o Linux. El helper
+crea `.env` con una clave aleatoria y se niega a sobrescribir una configuración
+existente. No muestra la clave. No hay un usuario ni una contraseña
+predeterminados.
 
-La aplicación está pensada para una persona en un equipo que administra. La
-base de datos y los adjuntos permanecen en `self-hosted-data`; las copias
-locales se guardan en `self-hosted-backups`. El archivo `.env` contiene una
-clave propia de la instalación y no se incluye en las copias. Guarda una copia
-en otro dispositivo y sigue la guía de
-[copia, restauración y actualización](docs/self-hosted-recovery.md).
+## Datos y límites
 
-El MVP cubre cuentas manuales, importación CSV, revisión de movimientos,
-estadísticas y exportación a Excel. No ofrece cuentas multiusuario, alojamiento
-gestionado ni sincronización en la nube. La conexión bancaria no está habilitada
-ni soportada por el Compose público; requiere configuración, credenciales,
-consentimiento y callback HTTPS propios, y está sujeta a las condiciones del
-proveedor. Consulta la [decisión de alcance bancario](docs/analysis/OSS_BANK_CONNECTION_DECISION_2026-11-19.md).
-No publiques esta instalación en Internet con la configuración local.
+- Una instalación es para una persona. No hay registro público ni cuentas
+  multiusuario.
+- SQLite, adjuntos y copias permanecen en `self-hosted-data` y
+  `self-hosted-backups`. Conserva ambos directorios y sigue la
+  [guía de recuperación y actualización](docs/self-hosted-recovery.md).
+- El Compose publica solo en `127.0.0.1`. No lo expongas a Internet ni a la red
+  local.
+- La conexión bancaria está desactivada y fuera de soporte. La licencia MIT no
+  concede acceso a APIs bancarias.
+- La release no distribuye imágenes OCI; Compose construye las imágenes en tu
+  equipo.
 
-## Versiones y soporte
+## Agentes de código
 
-La primera versión estable aún no se ha publicado, así que todavía no hay una
-versión estable oficialmente soportada. Cuando haya una release, se dará soporte
-a la última versión estable publicada. El proyecto es personal y no ofrece un
-SLA ni soporte profesional.
+El repositorio incluye instrucciones para OpenAI Codex, Cursor, Claude Code,
+Gemini CLI y GitHub Copilot. `AGENTS.md` es la guía común; `CLAUDE.md`,
+`GEMINI.md` y `.github/copilot-instructions.md` enlazan con ella. Para instalar,
+el agente debe seguir la guía rápida, usar datos sintéticos y no exponer el
+servicio.
 
-## Licencia, autoría y colaboración
+## Desarrollo, seguridad y soporte
 
-El código se publica bajo la [licencia MIT](LICENSE). Autor y mantenedor:
-[Alejandro Regidor Orellana](https://github.com/alexregii). Es un proyecto
-personal, no un servicio de asesoría financiera ni una entidad bancaria.
+Para preparar dependencias de desarrollo, ejecuta `python scripts/bootstrap.py`.
+Las pruebas backend se ejecutan con `python manage.py test`; desde
+`frontend-react/`, usa `npm test` y `npm run build`. Las versiones están fijadas
+en `.python-version`, `.node-version` y los lockfiles.
 
-El alcance de la primera candidata y sus limitaciones están en
-[RELEASE_NOTES.md](RELEASE_NOTES.md). Los recursos visuales y las dependencias
-se describen en [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+El soporte se limita a la última release estable. Consulta
+[RELEASE_NOTES.md](RELEASE_NOTES.md) para el alcance publicado y
+[SECURITY.md](SECURITY.md) para informar vulnerabilidades en privado. No adjuntes
+extractos, bases de datos, `.env`, contraseñas ni datos financieros reales a un
+Issue o Pull Request.
 
-Se aceptan informes de errores y propuestas de cambio mediante las pestañas
-**Issues** y **Pull requests** del repositorio donde se publique este proyecto.
-Incluye pasos reproducibles y datos inventados. Nunca adjuntes extractos,
-exportaciones, copias de la base de datos, archivos `.env`, claves ni otros datos
-financieros reales. Lee [SECURITY.md](SECURITY.md) antes de informar de una
-vulnerabilidad.
+## Licencia y autoría
+
+MIT. Autor y mantenedor: [Alejandro Regidor Orellana](https://github.com/alexregii).
+Proyecto personal; no ofrece asesoría financiera ni servicios bancarios.

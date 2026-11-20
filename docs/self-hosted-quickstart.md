@@ -7,27 +7,31 @@ la abras a la red local con esta configuración.
 ## Requisitos
 
 - Docker Desktop actualizado con Docker Compose v2 en Windows, macOS o Linux.
+- Python para crear la clave local de Django. Python no ejecuta la aplicación;
+  eso lo hacen los contenedores.
 - Espacio local para la base de datos, los archivos importados y las copias de
   seguridad.
 
 ## Preparar la instalación
 
 1. Descarga o clona el repositorio y abre una terminal en su carpeta raíz.
-2. Crea el archivo de configuración local a partir del ejemplo:
+2. Crea `.env` desde el ejemplo con una clave aleatoria. El comando falla si
+   `.env` ya existe, para conservar la configuración de una instalación
+   anterior. No muestra la clave:
 
    ```powershell
-   Copy-Item .env.example .env
+   python scripts/init_self_hosted_env.py
    ```
 
-3. Genera una clave nueva para Django y reemplaza el valor de
-   `DJANGO_SECRET_KEY` en `.env`. Por ejemplo, si tienes Python instalado:
+   En macOS o Linux, ejecuta:
 
-   ```powershell
-   python -c "import secrets; print(secrets.token_urlsafe(50))"
+   ```sh
+   python3 scripts/init_self_hosted_env.py
    ```
 
-   No reutilices la clave de otra instalación. No compartas ni subas `.env`.
-4. Deja vacíos `ENABLE_BANKING_APP_ID` y
+   El helper usa solo la biblioteca estándar de Python. No reutilices la clave
+   de otra instalación ni compartas o subas `.env`.
+3. Deja vacíos `ENABLE_BANKING_APP_ID` y
    `ENABLE_BANKING_PRIVATE_KEY_PATH`. La sincronización bancaria no forma parte
    de este inicio rápido.
 

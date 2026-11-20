@@ -25,6 +25,8 @@ frontend-react/vite.config.d.ts
 **/.e2e/
 secrets/
 **/secrets/
+CLAUDE.local.md
+.claude/settings.local.json
 *.pem
 *.p12
 *.pfx

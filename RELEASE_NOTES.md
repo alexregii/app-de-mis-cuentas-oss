@@ -44,3 +44,11 @@ remoto o alojamiento gestionado.
 La guía `SECURITY.md` ahora dirige directamente al canal privado de
 vulnerabilidades, que está habilitado en el repositorio público. Esta versión
 solo actualiza documentación; no cambia el código de la aplicación.
+
+## v0.1.2 — guía visual e instalación para agentes
+
+El README ahora presenta el flujo CSV→revisión→Excel y una captura móvil con
+datos sintéticos. La distribución incluye una guía común para agentes de código
+y entradas ligeras para Claude Code, Gemini CLI y GitHub Copilot. El nuevo
+helper crea `.env` con una clave aleatoria sin mostrarla ni sobrescribir una
+configuración existente. No cambia el comportamiento financiero de la app.

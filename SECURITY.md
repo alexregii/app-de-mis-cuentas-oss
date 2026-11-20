@@ -2,8 +2,8 @@
 
 ## Versiones con soporte
 
-La versión estable actual es `v0.1.1`. El soporte se limita a la última versión
-estable publicada; no hay un plazo de respuesta garantizado.
+El soporte se limita a la última versión estable publicada; no hay un plazo de
+respuesta garantizado.
 
 ## Informar de una vulnerabilidad
 
